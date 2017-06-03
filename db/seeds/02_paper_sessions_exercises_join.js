@@ -1,8 +1,8 @@
 
 exports.seed = function(knex) {
-  return knex('paper_sessions_categories').del()
+  return knex('paper_sessions_categories_join').del()
     .then(() => {
-      return knex('paper_sessions_categories').insert([
+      return knex('paper_sessions_categories_join').insert([
         {
           id: 1,
           paper_session_id: 1,
@@ -147,7 +147,7 @@ exports.seed = function(knex) {
     })
     .then(() => {
       return knex.raw(
-        "SELECT setval('paper_sessions_categories_id_seq', (SELECT MAX(id) FROM paper_sessions_categories));"
+        "SELECT setval('paper_sessions_categories_join_id_seq', (SELECT MAX(id) FROM paper_sessions_categories_join));"
       );
     });
 };

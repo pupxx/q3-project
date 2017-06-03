@@ -2,7 +2,7 @@ exports.up = function(knex) {
   return knex.schema.createTable('exercise_categories', table => {
     table.increments()
     table.string('name').notNullable()
-    table.string('muscle_worked').notNullab  })
+    table.string('muscle_worked').notNullable()})
 }
 
 exports.down = (knex) => {

@@ -4,84 +4,84 @@ exports.seed = function(knex) {
       return knex('exercise_categories').insert([
         {
           id: 1,
-          name: 'Lower body',
+          exercise_category_name: 'Lower body',
           muscle_worked: 'Thighs'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 2,
-          name: 'Lower body',
+          exercise_category_name: 'Lower body',
           muscle_worked: 'Calves'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 3,
-          name: 'Lower body',
+          exercise_category_name: 'Lower body',
           muscle_worked: 'Glutes'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 4,
-          name: 'Lower body',
+          exercise_category_name: 'Lower body',
           muscle_worked: 'Overall'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 5,
-          name: 'Uppper body',
+          exercise_category_name: 'Uppper body',
           muscle_worked: 'Triceps'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 6,
-          name: 'Upper body',
+          exercise_category_name: 'Upper body',
           muscle_worked: 'Back'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 7,
-          name: 'Upper body',
+          exercise_category_name: 'Upper body',
           muscle_worked: 'Shoulders'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 8,
-          name: 'Upper Body',
+          exercise_category_name: 'Upper Body',
           muscle_worked: 'Biceps'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 9,
-          name: 'Upper body',
+          exercise_category_name: 'Upper body',
           muscle_worked: 'Overall'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 10,
-          name: 'Core',
+          exercise_category_name: 'Core',
           muscle_worked: 'Overall'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 11,
-          name: 'Cardio',
+          exercise_category_name: 'Cardio',
           muscle_worked: 'Overall'
           created_at: new Date(),
           updated_at: new Date()
         },
         {
           id: 12,
-          name: 'Total body',
+          exercise_category_name: 'Total body',
           muscle_worked: 'Overall'
           created_at: new Date(),
           updated_at: new Date()

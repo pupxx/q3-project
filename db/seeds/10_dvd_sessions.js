@@ -5,7 +5,8 @@ exports.seed = function(knex) {
       {
         id: 1,
         workout_id: 1,
-        name: 'Max Leg Workout',
+        user_id: 1,
+        title: 'Max Leg Workout',
         date: new Date(),
         calories_burned: 300,
         average_heart_rate: 130,
@@ -15,7 +16,8 @@ exports.seed = function(knex) {
       }, {
         id: 2,
         workout_id: 2,
-        name: 'Great Arms',
+        user_id: 2,
+        title: 'Great Arms',
         date: new Date(),
         calories_burned: 200,
         average_heart_rate: 115,
@@ -25,7 +27,8 @@ exports.seed = function(knex) {
       }, {
         id: 3,
         workout_id: 3,
-        name: 'Super Abs',
+        user_id: 3,
+        title: 'Super Abs',
         date: new Date(),
         calories_burned: 275,
         average_heart_rate: 120,
@@ -35,7 +38,8 @@ exports.seed = function(knex) {
       }, {
         id: 4,
         workout_id: 3,
-        name: 'Hot Buns',
+        user_id: 4,
+        title: 'Hot Buns',
         date: new Date(),
         calories_burned: 300,
         average_heart_rate: 128,

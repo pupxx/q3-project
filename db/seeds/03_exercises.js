@@ -4,7 +4,7 @@ exports.seed = function(knex) {
       return knex('exercises').insert([
         {
           id: 1,
-          name: 'Narrow-stance squats',
+          exercise_name: 'Narrow-stance squats',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 1,
           created_at: new Date(),
@@ -12,7 +12,7 @@ exports.seed = function(knex) {
         },
         {
           id: 2,
-          name: 'Forward lunges',
+          exercise_name: 'Forward lunges',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 2,
           created_at: new Date(),
@@ -20,7 +20,7 @@ exports.seed = function(knex) {
         },
         {
           id: 3,
-          name: 'Reverse lunges',
+          exercise_name: 'Reverse lunges',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 3,
           created_at: new Date(),
@@ -28,7 +28,7 @@ exports.seed = function(knex) {
         },
         {
           id: 4,
-          name: 'Plyo jacks',
+          exercise_name: 'Plyo jacks',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 7,
           created_at: new Date(),
@@ -36,7 +36,7 @@ exports.seed = function(knex) {
         },
         {
           id: 5,
-          name: 'Kickbacks',
+          exercise_name: 'Kickbacks',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 5,
           created_at: new Date(),
@@ -44,7 +44,7 @@ exports.seed = function(knex) {
         },
         {
           id: 6,
-          name: 'Reverse crunches',
+          exercise_name: 'Reverse crunches',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 7,
           created_at: new Date(),
@@ -52,7 +52,7 @@ exports.seed = function(knex) {
         },
         {
           id: 7,
-          name: 'One-arm rows',
+          exercise_name: 'One-arm rows',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 1,
           created_at: new Date(),
@@ -60,7 +60,7 @@ exports.seed = function(knex) {
         },
         {
           id: 8,
-          name: 'Bench press',
+          exercise_name: 'Bench press',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 2,
           created_at: new Date(),
@@ -68,7 +68,7 @@ exports.seed = function(knex) {
         },
         {
           id: 9,
-          name: 'Divebomber push-ups',
+          exercise_name: 'Divebomber push-ups',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 7,
           created_at: new Date(),
@@ -76,7 +76,7 @@ exports.seed = function(knex) {
         },
         {
           id: 10,
-          name: 'Lateral raises',
+          exercise_name: 'Lateral raises',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 4,
           created_at: new Date(),

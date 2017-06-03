@@ -1,7 +1,7 @@
 exports.up = function(knex) {
   return knex.schema.createTable('workout_categories', table => {
     table.increments()
-    table.string('name').notNullable()
+    table.string('type').notNullable()
   })
 }
 

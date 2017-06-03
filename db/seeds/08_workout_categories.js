@@ -4,22 +4,22 @@ exports.seed = function(knex) {
       return knex('workout_categories').insert([
       {
         id: 1,
-        name: 'Kickboxing'
+        type: 'Kickboxing'
         created_at: new Date(),
         updated_at: new Date()
       }, {
         id: 2,
-        name: 'Total Body'
+        type: 'Total Body'
         created_at: new Date(),
         updated_at: new Date()
       }, {
         id: 3,
-        name: 'Yoga'
+        type: 'Yoga'
         created_at: new Date(),
         updated_at: new Date()
       }, {
         id: 4,
-        name: 'Pilates'
+        type: 'Pilates'
         created_at: new Date(),
         updated_at: new Date()
       },

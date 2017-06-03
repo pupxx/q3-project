@@ -1,8 +1,10 @@
+exports.up = function(knex) {
+  return knex.schema.createTable('exercise_categories', table => {
+    table.increments()
+    table.string('name').notNullable()
+    table.string('muscle_worked').notNullab  })
+}
 
-exports.up = function(knex, Promise) {
-  
-};
-
-exports.down = function(knex, Promise) {
-  
-};
+exports.down = (knex) => {
+  return knex.schema.dropTable('exercise_categories')
+}

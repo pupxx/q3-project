@@ -9,12 +9,12 @@ body{
 
 .image-container {
   display: inline-block;
-  width: 30%;
+  width: 45%;
   float: left;
 }
 .quote-container {
   display: inline-block;
-  width: 70%;
+  width: 55%;
   float: right;
 }
 .bordered {
@@ -23,6 +23,12 @@ body{
   border-width: 2px;
   padding: 1px;
 }
+
 .calendar-container {
 
+}
+
+.splash-pic {
+  height: 100px;
+  width: 130px;
 }

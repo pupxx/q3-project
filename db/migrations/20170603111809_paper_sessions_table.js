@@ -1,7 +1,7 @@
 exports.up = function(knex) {
   return knex.schema.createTable('paper_sessions', table => {
     table.increments()
-    table.string("name").notNullable()
+    table.string("paper_session_name").notNullable()
     table.dateTime("date").notNullable().defaultTo(knex.fn.now())
     table.integer("calories_burned").defaultTo(0)
     table.integer("average_heart_rate").defaultTo(0)

@@ -3,25 +3,25 @@ exports.seed = function(knex) {
     .then(() => {
       return knex('equipment').insert([{
 		 id: 1,
-        name: 'Dumbbells',
+        equipment_type: 'Dumbbells',
       },{
 		 id: 2,
-        name: 'Kettlebell',
+        equipment_type: 'Kettlebell',
       },{
 		 id: 3,
-        name: 'Pull-up Bar',
+        equipment_type: 'Pull-up Bar',
       },{
 		 id: 4,
-        name: 'Stability Ball',
+        equipment_type: 'Stability Ball',
       },{
 		 id: 5,
-        name: 'Yoga Mat',
+        equipment_type: 'Yoga Mat',
       },{
 		 id: 6,
-        name: 'Medicine Ball',
+        equipment_type: 'Medicine Ball',
       },{
 		 id: 7,
-        name: 'None',
+        equipment_type: 'None',
       }]);
     })
     .then(() => {

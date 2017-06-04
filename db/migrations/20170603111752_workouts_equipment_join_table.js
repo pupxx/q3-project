@@ -3,6 +3,7 @@ exports.up = function(knex) {
     table.increments()
     table.integer('workout_id').references('workouts.id').onDelete('CASCADE')
     table.integer('equipment_id').references('equipment.id').onDelete('CASCADE')
+    table.timestamps(true, true);
   })
 }
 

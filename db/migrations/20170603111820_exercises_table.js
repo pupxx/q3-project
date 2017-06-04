@@ -4,6 +4,7 @@ exports.up = function(knex) {
     table.string('exercise_name').notNullable()
     table.string('demo_url').defaultTo('www')
     table.integer('equipment_id').references('equipment.id').onDelete('CASCADE')
+    table.timestamps(true, true);
   })
 }
 

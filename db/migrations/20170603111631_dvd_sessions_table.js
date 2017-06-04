@@ -7,6 +7,7 @@ exports.up = function(knex) {
     table.integer("average_heart_rate").defaultTo(0)
     table.integer("max_heart_rate").defaultTo(0)
     table.integer('user_id').references('users.id').onDelete('CASCADE')
+    table.timestamps(true, true);
   })
 }
 

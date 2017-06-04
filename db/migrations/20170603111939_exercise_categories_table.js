@@ -3,6 +3,7 @@ exports.up = function(knex) {
     table.increments()
     table.string('name').notNullable()
     table.string('muscle_worked').notNullab  })
+    table.timestamps(true, true);
 }
 
 exports.down = (knex) => {

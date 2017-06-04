@@ -4,6 +4,7 @@ exports.up = function(knex) {
     table.string("title").notNullable()
     table.integer('instructor_id').references('instructors.id').onDelete('CASCADE')
     table.integer('workout_category_id').references('workout_categories.id').onDelete('CASCADE')
+    table.timestamps(true, true);
   })
 }
 

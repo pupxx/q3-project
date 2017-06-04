@@ -19,7 +19,7 @@ exports.seed = function(knex) {
 		 id: 3,
         title: 'P90X',
         instructor_id: 3,
-        workout_category_id: 0,
+        workout_category_id: 3,
         created_at: new Date(),
         updated_at: new Date()
       }]);

@@ -3,30 +3,77 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- STYLING -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" />
+  <link rel="stylesheet" href="./stylesheets/main.css">
+  <title>Q3 Workout App</title>
+
+
+  <!-- ANGULAR JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
 
-  <link rel="stylesheet" href="./stylesheets/main.css">
-  <!-- Moment, for calculating post times -->
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.js"></script>
+
+
+  <!-- MOMENT & ANGULAR MOMENT (for calculating post times) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.1/angular-moment.min.js"></script>
 
-  <!-- Resource, for routes -->
+
+  <!-- RESOURCE (for routes) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.4/angular-resource.js">
   </script>
 
-  <!-- Angular UI Router -->
+
+  <!-- ANGULAR UI ROUTER JS -->
   <script src="https://unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js"></script>
 
-  <!-- My app -->
+
+  <!-- MAIN APP -->
   <script type="text/javascript" src="./app.module.js"></script>
 
 </head>
 
 <body>
-  <h1>hey</h1>
 
+  <h1>Navbar will go here</h1>
+  <div class="container text-center">
+  <h3>This is the area below the navbar - it is full-width</h3><br>
+  <div class="row bordered">
+    <div class="col-sm-4">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>First card would go here </p>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Second card here</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Second card here</p>
+    </div>
+  </div> <!-- ROW -->
+  <div class="row">
+    <div class="col-sm-4 bordered">
+      <div class="image-container">
+        <img src="http://via.placeholder.com/100x100" class="img-responsive" alt="image">
+      </div>
+      <div class="quote-container">
+        This will have the image and inspirational quote
+      </div>
+    </div> <!-- COLUMN -->
+
+    <div class="col-sm-8 bordered">
+      <div class="calendar-container">
+        This will have the 1-week calendar
+      </div
+    </div>
+  </div> <!-- ROW -->
+</div><br>
   <base href="/">
   <ui-view></ui-view>
 

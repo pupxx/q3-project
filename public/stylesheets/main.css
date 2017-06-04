@@ -3,10 +3,26 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: red;
+body{
+  background-color: white;
 }
 
-body{
-  background-color: red;
+.image-container {
+  display: inline-block;
+  width: 30%;
+  float: left;
+}
+.quote-container {
+  display: inline-block;
+  width: 70%;
+  float: right;
+}
+.bordered {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  padding: 1px;
+}
+.calendar-container {
+
 }

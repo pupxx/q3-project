@@ -5,7 +5,7 @@ exports.seed = function(knex) {
 		 id: 1,
         title: 'Insanity',
         instructor_id: 3,
-        workout_category_id: 4,
+        workout_category_id: 1,
         created_at: new Date(),
         updated_at: new Date()
       },{
@@ -17,9 +17,16 @@ exports.seed = function(knex) {
         updated_at: new Date()
       },{
 		 id: 3,
-        title: 'P90X',
-        instructor_id: 3,
-        workout_category_id: 3,
+        title: 'P90X - Legs and Back',
+        instructor_id: 2,
+        workout_category_id: 5,
+        created_at: new Date(),
+        updated_at: new Date()
+      },{
+		 id: 4,
+        title: 'P90X - Ab Ripper X',
+        instructor_id: 2,
+        workout_category_id: 7,
         created_at: new Date(),
         updated_at: new Date()
       }]);

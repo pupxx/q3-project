@@ -7,6 +7,7 @@ exports.seed = function(knex) {
           exercise_name: 'Narrow-stance squats',
           demo_url: 'https://www.youtube.com/watch?v=mvNcSF-nXg4',
           equipment_id: 1,
+          
           created_at: new Date(),
           updated_at: new Date()
         },

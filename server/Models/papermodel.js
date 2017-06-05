@@ -6,7 +6,8 @@ class Paper {
   }
 
   static getAll(){
-    return knex('paper_sessions')
+    let id = 1
+    return knex('*').from('paper_sessions').where('user_id' , id)
   }
 }
 

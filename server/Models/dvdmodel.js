@@ -6,7 +6,8 @@ class Dvd {
   }
 
   static getAll(){
-    return knex('dvd_sessions')
+    let id = 1
+    return knex('*').from('dvd_sessions').where('user_id', id)
   }
 }
 

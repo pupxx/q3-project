@@ -18,11 +18,15 @@ console.log('config file connected');
     //   name: 'story', templateUrl: './scripts/stories/template.html'
     // })
     .state({
-      name: 'dvdIndex', url: '/home', component: 'dvdIndex'
+      name: 'landingIndex', url: '/home', component: 'landingIndex'
     })
 
     .state({
       name: 'paperIndex', url: '/paper', component: 'paperIndex'
+    })
+
+    .state({
+      name: 'dvdIndex', url: '/dvd', component: 'dvdIndex'
     })
     // .state({
     //   name: 'story.show', url: '/stories/:id', component: 'stories.show'

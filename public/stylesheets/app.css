@@ -8,28 +8,68 @@
   border: 1px solid transparent;
 }
 
-/* line 11, ../scss/app.scss */
+/* line 10, ../scss/app.scss */
+.badge {
+  background-color: #2283c5 !important;
+}
+
+/* line 14, ../scss/app.scss */
+.badge-cardio {
+  background-color: #2283c5 !important;
+}
+
+/* line 17, ../scss/app.scss */
+.badge-weights {
+  background-color: #2283c5 !important;
+}
+
+/* line 20, ../scss/app.scss */
+.badge-full-body-circuit {
+  background-color: #2283c5 !important;
+}
+
+/* line 23, ../scss/app.scss */
+.badge-yoga {
+  background-color: #2283c5 !important;
+}
+
+/* line 26, ../scss/app.scss */
+.badge-legs-and-back {
+  background-color: #2283c5 !important;
+}
+
+/* line 30, ../scss/app.scss */
+.badge-chest-and-arms {
+  background-color: #2283c5 !important;
+}
+
+/* line 33, ../scss/app.scss */
+.badge-core {
+  background-color: #2283c5 !important;
+}
+
+/* line 38, ../scss/app.scss */
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: white;
 }
 
-/* line 18, ../scss/app.scss */
+/* line 44, ../scss/app.scss */
 .image-container {
   display: inline-block;
   width: 45%;
   float: left;
 }
 
-/* line 23, ../scss/app.scss */
+/* line 49, ../scss/app.scss */
 .quote-container {
   display: inline-block;
   width: 55%;
   float: right;
 }
 
-/* line 28, ../scss/app.scss */
+/* line 54, ../scss/app.scss */
 .bordered {
   border-color: black;
   border-style: solid;
@@ -37,7 +77,7 @@ body {
   padding: 1px;
 }
 
-/* line 39, ../scss/app.scss */
+/* line 65, ../scss/app.scss */
 .splash-pic {
   height: 100px;
   width: 130px;

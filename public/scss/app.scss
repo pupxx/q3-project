@@ -1,3 +1,13 @@
+.scrollable {
+  height: 400px;
+  max-height: 400px;
+  overflow-y: scroll;
+  border-radius: 10px;
+  box-shadow: 0 0 0 3px #000;
+  border: 1px solid transparent;
+}
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;

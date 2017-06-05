@@ -7,7 +7,7 @@ class Paper {
 
   static getAll(){
     let id = 1
-    return knex('*').from('paper_sessions').where('user_id' , id)
+    return knex('paper_sessions').where('user_id' , id).select('paper_session_name', 'calories_burned', 'date')
   }
 }
 

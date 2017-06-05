@@ -13,10 +13,17 @@ console.log('index.js is connected');
 
     vm.$onInit = function (){
       console.log('landing index js');
-      // $http.get(`${baseUrl}/api/posts`).then((posts)=>{
-      //   vm.posts = posts.data
-      //   console.log(vm.posts);
-      // })
+      let today = new Date()
+      let formattedToday = moment(today).format('YYYY-MM-DD')
+      let dateFrom = moment().subtract(7,'d').format('YYYY-MM-DD');
+      console.log('formattedToday is ', formattedToday);
+
+      console.log('dateFrom is ', dateFrom)
+
+      $http.get(`${baseUrl}/api/landing`).then((result)=>{
+        vm.result = result.data
+        console.log(vm.result);
+      })
     }
 
 

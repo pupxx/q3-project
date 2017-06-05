@@ -10,8 +10,8 @@ function getAll (req, res){
       let paperWorkouts = pworkouts
       console.log(dvdworkouts, paperWorkouts);
       // let result = [dvdworkouts, paperWorkouts]
-      let result = { dvd_workouts: dvdworkouts, paper_workouts: paperWorkouts }
-      // let result = dvdworkouts.concat(paperWorkouts)
+      // let result = { dvd_workouts: dvdworkouts, paper_workouts: paperWorkouts }
+      let result = dvdworkouts.concat(paperWorkouts)
       res.json(result)
     })
   });

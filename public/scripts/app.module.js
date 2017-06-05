@@ -1,4 +1,4 @@
-console.log('hojo');
+console.log('module file connected');
 
 (function(){
   'use strict'

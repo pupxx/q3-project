@@ -7,13 +7,14 @@
   border: 1px solid transparent;
 }
 
-badge-success { background-color: #2283c5!important }
+.badge {
+   background-color: #2283c5!important
+  }
 
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: white;
-
 }
 
 .image-container {

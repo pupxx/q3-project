@@ -1,9 +1,9 @@
 console.log('index.js is connected');
 (function(){
   angular.module('app')
-  .component('dvdIndex', {
+  .component('paperIndex', {
     controller: controller,
-    templateUrl: './scripts/dvd/dvd.index.html'
+    templateUrl: './scripts/paper/paper.index.html'
   })
 
   controller.$inject = ['API_BASE_URL', '$http']
@@ -12,7 +12,7 @@ console.log('index.js is connected');
     console.log('!!!')
 
     vm.$onInit = function (){
-      console.log('dvd index js');
+      console.log('paper index js');
       // $http.get(`${baseUrl}/api/posts`).then((posts)=>{
       //   vm.posts = posts.data
       //   console.log(vm.posts);

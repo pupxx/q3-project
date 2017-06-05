@@ -20,6 +20,10 @@ console.log('config file connected');
     .state({
       name: 'dvdIndex', url: '/home', component: 'dvdIndex'
     })
+
+    .state({
+      name: 'paperIndex', url: '/paper', component: 'paperIndex'
+    })
     // .state({
     //   name: 'story.show', url: '/stories/:id', component: 'stories.show'
     // })

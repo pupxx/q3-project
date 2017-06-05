@@ -1,19 +1,25 @@
+/* line 1, ../scss/app.scss */
 body {
   background-color: white;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+/* line 7, ../scss/app.scss */
 .image-container {
   display: inline-block;
   width: 45%;
   float: left;
 }
+
+/* line 12, ../scss/app.scss */
 .quote-container {
   display: inline-block;
   width: 55%;
   float: right;
 }
+
+/* line 17, ../scss/app.scss */
 .bordered {
   border-color: black;
   border-style: solid;
@@ -21,10 +27,7 @@ body {
   padding: 1px;
 }
 
-.calendar-container {
-
-}
-
+/* line 28, ../scss/app.scss */
 .splash-pic {
   height: 100px;
   width: 130px;

@@ -1,8 +1,12 @@
 var express = require('express');
 var router = express.Router();
-const ctrl = require('../controller/dvdcontroller')
+const dvd = require('../controller/dvdcontroller')
+const paper = require('../controller/papercontroller')
 
 /* GET home page. */
-router.get('/', ctrl.getAll)
+router.get('/landing', dvd.getAll)
+router.get('/dvd', dvd.getAllWorkouts)
+router.get('/build-from-exercises', paper.getExercises)
+
 
 module.exports = router;

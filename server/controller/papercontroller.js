@@ -1,15 +1,13 @@
 const dvd = require('../Models/dvdmodel');
 const paper = require('../Models/papermodel')
 
-
-// function getAll(req, res){
-//   paper.getAll().then((pworkouts)=>{
-//     let paperWorkouts = pworkouts
-//
-//     console.log(paperWorkouts);
-//   });
-// }
+// Get all Exercises
+function getExercises(req, res){
+  paper.getExercises().then((exercises)=>{
+    res.json(exercises)
+  });
+}
 
 module.exports = {
-  getAll
+  getExercises
 }

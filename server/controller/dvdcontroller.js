@@ -3,12 +3,10 @@ const paper = require('../Models/papermodel')
 
 
 function getAll (req, res){
-
   dvd.getAll().then((dworkouts)=>{
     let dvdworkouts = dworkouts
     paper.getAll().then((pworkouts)=>{
       let paperWorkouts = pworkouts
-      console.log(dvdworkouts, paperWorkouts);
       // let result = [dvdworkouts, paperWorkouts]
       // let result = { dvd_workouts: dvdworkouts, paper_workouts: paperWorkouts }
       let result = dvdworkouts.concat(paperWorkouts)
@@ -17,6 +15,13 @@ function getAll (req, res){
   });
 }
 
+// Get all DVD workouts
+function getAllWorkouts(req, res){
+  dvd.getAllWorkouts().then((dvdworkouts)=>{
+    res.json(dvdworkouts);
+  })
+}
+
 module.exports = {
-  getAll
+  getAll, getAllWorkouts
 }

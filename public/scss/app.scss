@@ -1,8 +1,12 @@
-// ===== VARIABLES =====
+/** ===== VARIABLES =====
+*/
 $box-shadow-card: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 $recurring-blue: rgba(121, 139, 161, 0.8);
+
 $body-background: #7C7873;
+
+$navbar-gradient: linear-gradient(#fff, $body-background, #fff);
 
 $quote-gradient: radial-gradient(#fff, $body-background);
 
@@ -12,9 +16,82 @@ body {
   background-color: #7C7873;
 }
 
+/**
+BANNER
+*/
 .banner {
   background: $quote-gradient;
+
+  h3 {
+    color: #E8E7E6;
+  }
 }
+
+/**
+CARDS
+*/
+.card-main {
+  .card-image {
+    box-shadow: $box-shadow-card;
+  }
+
+  .hover-fun {
+    transition: opacity .5s, transform .3s;
+  }
+
+  .hover-fun:hover {
+    opacity: .5;
+    transform: scale(1.01);
+  }
+}
+
+/**
+QUOTE
+*/
+.quote-container {
+  background: rgba(20,20,20,.75);
+  display: inline-block;
+  width: 100%;
+  float: left;
+  height: 100px;
+  color: white;
+
+  h3 {
+    text-shadow: 0 0 3px #7C7873;
+  }
+}
+
+/**
+7-DAY CALENDAR
+*/
+.calendar-container {
+  display: flex;
+
+  .outer {
+    position: relative;
+    background: url("https://placehold.it/100x60?text=IMAGE");
+    width: 90px;
+    height: 100px;
+    border: 2px solid white;
+
+    .bottomleft {
+      display:inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 0.5em;
+      width: 80px;
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}
+
+/**
+
+*/
+.badge {
+   background-color: $recurring-blue!important
+  }
 
 .scrollable {
   height: 400px;
@@ -25,61 +102,8 @@ body {
   border: 1px solid transparent;
 }
 
-.badge {
-   background-color: $recurring-blue!important
-  }
-
 .bordered {
   border-style: solid;
   border-width: 2px;
   padding: 1px;
-}
-
-.splash-pic {
-  height: 100px;
-  width: 170px;
-}
-
-.quote-container {
-  background: rgba(20,20,20,.75);
-  display: inline-block;
-  width: 100%;
-  float: left;
-  height: 100px;
-  color: white;
-}
-
-.calendar-container {
-  display: flex;
-}
-
-.outer {
-  position: relative;
-  background: url("https://placehold.it/100x60?text=IMAGE");
-  width: 90px;
-  height: 100px;
-  border: 2px solid white;
-}
-
- .bottomleft {
-  display:inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0.5em;
-  width: 80px;
-  font-weight: bold;
-  color: #000;
-}
-
-.card-main {
-  box-shadow: $box-shadow-card;
-}
-
-.hover-fun {
-  transition: opacity .5s, transform .4s;
-}
-
-.hover-fun:hover {
-  opacity: .5;
-  transform: scale(1.01);
 }

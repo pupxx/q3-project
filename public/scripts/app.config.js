@@ -37,6 +37,10 @@ console.log('config file connected');
       name: 'showPaperSession', url: '/paper-session', component: 'showPaperSession'
     })
 
+    .state({
+      name: 'historyIndex', url: '/history', component: 'historyIndex'
+    })
+
     // .state({
     //   name: 'story.show', url: '/stories/:id', component: 'stories.show'
     // })

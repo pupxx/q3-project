@@ -1,32 +1,40 @@
 <div class="container banner text-center">
-<h3>ON THE LANDING.INDEX.HTML PAGE</h3><br>
-<div class="row">
-  <div class="col-sm-4">
-    <img src="https://previews.123rf.com/images/tonobalaguer/tonobalaguer1404/tonobalaguer140400538/27491406-Rope-Climb-exercise-woman-workout-at-gym-climbing-Stock-Photo-crossfit.jpg" class="hover-fun img-responsive card-main" style="width:100%" alt="Image">
-    <p>SUGGESTED WORKOUT</p>
-  </div>
-  <div class="col-sm-4">
-    <img src="http://875westend.com/875bluefoxhouseboat/wp-content/uploads/weightlifter-bw.jpg" class="hover-fun img-responsive card-main" style="width:100%" alt="Image">
-    <p>CREATE A WORKOUT</p>
-  </div>
-  <div class="col-sm-4">
-    <img src="https://s-media-cache-ak0.pinimg.com/736x/69/bb/f9/69bbf933e7eb89e83948f2837e7ad740.jpg" class="hover-fun img-responsive card-main" style="width:100%" alt="Image">
-    <p>WORKOUT HISTORY</p>
-  </div>
-</div> <!-- ROW -->
-<div class="row">
-  <div class="col-sm-4">
-    <div class="quote-container">
-      <h3>Sore Today,</br> Strong Tomorrow</h3>
-    </div>
-  </div> <!-- COLUMN -->
+  <h3>ON THE LANDING.INDEX.HTML PAGE</h3><br>
+  <div class="row">
+    <div class="col-sm-4 card-main">
+      <img src="https://previews.123rf.com/images/tonobalaguer/tonobalaguer1404/tonobalaguer140400538/27491406-Rope-Climb-exercise-woman-workout-at-gym-climbing-Stock-Photo-crossfit.jpg" class="hover-fun img-responsive card-image" style="width:100%" alt="Woman Climbing Rope">
+      <p>SUGGESTED WORKOUT</p>
+    </div> <!-- COLUMN -->
 
-  <div class="col-sm-8 calendar-container">
-    <div ng-repeat="day in $ctrl.newArray" >
-      <div class="outer">
-        <div class="bottomleft">
-          <p>{{day.calories_burned}}</p><p>{{day.date}}</p>
-        </div> <!-- REPEAT -->
-      </div> <!-- OUTER -->
-    </div> <!-- ROW -->
-  </div> <!-- COLUMN -->
+    <div class="col-sm-4 card-main">
+      <img src="http://875westend.com/875bluefoxhouseboat/wp-content/uploads/weightlifter-bw.jpg" class="hover-fun img-responsive card-image" style="width:100%" alt="Man with Barbell">
+      <p>CREATE A WORKOUT</p>
+    </div> <!-- COLUMN -->
+
+    <div class="col-sm-4 card-main">
+      <img src="https://s-media-cache-ak0.pinimg.com/736x/69/bb/f9/69bbf933e7eb89e83948f2837e7ad740.jpg" class="hover-fun img-responsive card-image" style="width:100%" alt="Man Doing Squats">
+      <p>WORKOUT HISTORY</p>
+    </div> <!-- COLUMN -->
+  </div> <!-- ROW -->
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="quote-container">
+        <h3>Sore Today,</br>Strong Tomorrow</h3>
+      </div> <!-- QUOTE CONTAINER -->
+    </div> <!-- COLUMN -->
+
+    <div class="col-sm-8 calendar-container">
+      <div ng-repeat="day in $ctrl.newArray" >
+        <div class="outer">
+          <div class="bottomleft">
+            <p>
+              Calories: {{day.calories_burned}}</p><p>{{day.date}}
+            </p>
+          </div> <!-- BOTTOM LEFT -->
+        </div> <!-- OUTER -->
+      </div> <!-- REPEAT -->
+    </div> <!-- COLUMN / CALENDAR CONTAINER -->
+
+  </div> <!-- ROW -->
+</div> <!-- CONTAINER / BANNER -->

@@ -20,9 +20,13 @@ console.log('index.js is connected');
         console.log('all data is: ', temp);
         vm.newArray = temp.map(function(element) {
             let workoutDate = moment(element.date).format('YYYY-MM-DD')
+            let dayOfWeek = moment(element.date).format('YYYY-MM-DD')
+
             if (moment(workoutDate).isAfter(aWeekAgo)) {
               element.date = workoutDate
+              element.dayOfWeek = dayOfWeek
               console.log('element.date / workout date is', element.date)
+              console.log('element.dayOfWeek / workout day of week is', element.dayOfWeek)
               return element
             }
   	      })

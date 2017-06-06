@@ -29,7 +29,10 @@
    }
    $http.post('/api/dvd-session', workout).then(function (response) {
       console.log('yoooo');
-      console.log(response.data);
+      console.log(response);
+      })
+      .catch((err) => {
+        console.error(err)
       })
 console.log(workout);
 

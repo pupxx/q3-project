@@ -30,7 +30,13 @@ function createDvdSession(req, res){
   }
 
   dvd.createDvdSession().insert(workout).returning('*').then((result)=>{
-    console.log(result);
+    let id = result[0].id;
+
+    console.log("!!!!!!!!!!!!!!!!!!!!!!" + id);
+    res.send(result)
+  })
+  .catch((err) => {
+    next(err)
   })
 }
 

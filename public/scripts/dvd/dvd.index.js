@@ -12,8 +12,8 @@
 
     vm.$onInit = function (){
       $http.get(`${baseUrl}/api/dvd`).then((allDvd)=>{
-        vm.dvd = allDvd.data
-        console.log(vm.dvd);
+        vm.dvds = allDvd.data
+        console.log(vm.dvds);
       })
     }
 

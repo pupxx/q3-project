@@ -1,5 +1,5 @@
 <div class="container text-center">
-  <p>{{$ctrl.dvd}}</p>
+  <p>{{$ctrl.dvds}}</p>
 <h3>THIS IS DVD.INDEX.HTML</h3><br>
 <div class="row">
   <h3>List of category badges will go here</h3>
@@ -12,7 +12,11 @@
     <div class="card w-75">
       <div class="card-block">
         <h3 class="card-title">DVD List</h3>
-        <textarea class="card-text scrollable" style="min-width: 100%">We will insert the results of the "get all DVDs" query here</textarea>
+        <div class="card-text scrollable" style="min-width: 100%">
+          <div ng-repeat="dvd in $ctrl.dvds" class="">
+            <p>{{dvd.title}}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -20,7 +24,11 @@
     <div class="card w-75">
       <div class="card-block">
         <h3 class="card-title">Create Workout</h3>
-        <textarea class="card-text scrollable" style="min-width: 100%">We will allow users to drag from the list on the left, over to this area on the right</textarea>
+        <div class="card-text scrollable" style="min-width: 100%">
+          <div class="">
+            
+          </div>
+        </div>
         <a href="#" class="btn btn-primary">Click to save your workout</a>
       </div>
     </div>

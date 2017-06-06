@@ -12,8 +12,8 @@
 
     vm.$onInit = function (){
       $http.get(`${baseUrl}/api/build-from-exercises`).then((allPaper)=>{
-        vm.paper = allPaper.data
-        console.log(vm.paper);
+        vm.exercises = allPaper.data
+        console.log(vm.exercises);
       })
     }
 

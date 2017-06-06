@@ -1,7 +1,7 @@
 
 <div class="container text-center">
 <h3>THIS IS PAPER.INDEX.HTML</h3><br>
-<p>{{$ctrl.paper}}</p>
+<p>{{$ctrl.exercises}}</p>
 <div class="row">
   <h3>List of category badges will go here</h3>
   <span class="badge badge-default">Default</span>
@@ -13,7 +13,11 @@
     <div class="card w-75">
       <div class="card-block">
         <h3 class="card-title">Exercise List</h3>
-        <textarea class="card-text scrollable" style="min-width: 100%">We will insert the results of the "get all exercises" query here</textarea>
+        <div class="card-text scrollable" style="min-width: 100%">
+          <div ng-repeat="exercise in $ctrl.exercises" class="">
+            <p>{{exercise.exercise_name}}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -21,7 +25,11 @@
     <div class="card w-75">
       <div class="card-block">
         <h3 class="card-title">Create Workout</h3>
-        <textarea class="card-text scrollable" style="min-width: 100%">We will allow users to drag from the list on the left, over to this area on the right</textarea>
+        <div class="card-text scrollable" style="min-width: 100%">
+          <div class="">
+            
+          </div>
+        </div>
         <a href="#" class="btn btn-primary">Click to save your workout</a>
       </div>
     </div>

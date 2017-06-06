@@ -48,7 +48,6 @@ CARDS
 
 .card-text {
   background: white;
-
 }
 
 /**
@@ -75,10 +74,11 @@ QUOTE
 
   .outer {
     position: relative;
-    background: url("https://placehold.it/100x60?text=IMAGE");
-    width: 90px;
+    background: white;
+    width: 100px;
     height: 100px;
     border: 2px solid white;
+
 
     .bottomleft {
       display:inline-block;
@@ -112,44 +112,4 @@ QUOTE
   border-style: solid;
   border-width: 2px;
   padding: 1px;
-}
-
-
-/**
-FOOTER
-*/
--------------------------------------------------- */
-// html {
-//   position: relative;
-//   min-height: 100%;
-// }
-
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 280px;
-  background:
-  /* color overlay */
-    linear-gradient(
-      $body-background,
-      $recurring-blue
-    )
-}
-
-
-/* Custom footer CSS
--------------------------------------------------- */
-
-.container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-}
-.container .text-muted {
-  margin: 20px 0;
-}
-.footertext {
-  color: #ffffff;
 }

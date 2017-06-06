@@ -5,16 +5,17 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #7C7873;
+  margin-bottom: 60px;
 }
 
 /**
 BANNER
 */
-/* line 22, ../scss/app.scss */
+/* line 23, ../scss/app.scss */
 .banner {
   background: radial-gradient(#ffffff, #7c7873);
 }
-/* line 25, ../scss/app.scss */
+/* line 26, ../scss/app.scss */
 .banner h3 {
   color: #E8E7E6;
 }
@@ -22,24 +23,29 @@ BANNER
 /**
 CARDS
 */
-/* line 34, ../scss/app.scss */
+/* line 35, ../scss/app.scss */
 .card-main .card-image {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 38, ../scss/app.scss */
+/* line 39, ../scss/app.scss */
 .card-main .hover-fun {
   transition: opacity .5s, transform .3s;
 }
-/* line 42, ../scss/app.scss */
+/* line 43, ../scss/app.scss */
 .card-main .hover-fun:hover {
   opacity: .5;
   transform: scale(1.01);
 }
 
+/* line 49, ../scss/app.scss */
+.card-text {
+  background: white;
+}
+
 /**
 QUOTE
 */
-/* line 51, ../scss/app.scss */
+/* line 56, ../scss/app.scss */
 .quote-container {
   background: rgba(20, 20, 20, 0.75);
   display: inline-block;
@@ -48,7 +54,7 @@ QUOTE
   height: 100px;
   color: white;
 }
-/* line 59, ../scss/app.scss */
+/* line 64, ../scss/app.scss */
 .quote-container h3 {
   text-shadow: 0 0 3px #7C7873;
 }
@@ -56,19 +62,19 @@ QUOTE
 /**
 7-DAY CALENDAR
 */
-/* line 67, ../scss/app.scss */
+/* line 72, ../scss/app.scss */
 .calendar-container {
   display: flex;
 }
-/* line 70, ../scss/app.scss */
+/* line 75, ../scss/app.scss */
 .calendar-container .outer {
   position: relative;
-  background: url("https://placehold.it/100x60?text=IMAGE");
-  width: 90px;
+  background: white;
+  width: 100px;
   height: 100px;
   border: 2px solid white;
 }
-/* line 77, ../scss/app.scss */
+/* line 83, ../scss/app.scss */
 .calendar-container .outer .bottomleft {
   display: inline-block;
   position: absolute;
@@ -82,12 +88,12 @@ QUOTE
 /**
 
 */
-/* line 92, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 .badge {
   background-color: rgba(121, 139, 161, 0.8) !important;
 }
 
-/* line 96, ../scss/app.scss */
+/* line 102, ../scss/app.scss */
 .scrollable {
   height: 400px;
   max-height: 400px;
@@ -97,7 +103,7 @@ QUOTE
   border: 1px solid transparent;
 }
 
-/* line 105, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 .bordered {
   border-style: solid;
   border-width: 2px;

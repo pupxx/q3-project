@@ -74,3 +74,12 @@ body {
 .card-main {
   box-shadow: $box-shadow-card;
 }
+
+.hover-fun {
+  transition: opacity .5s, transform .4s;
+}
+
+.hover-fun:hover {
+  opacity: .5;
+  transform: scale(1.01);
+}

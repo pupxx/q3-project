@@ -25,13 +25,14 @@
       <div class="card-block">
         <h3 class="card-title">Create Workout</h3>
         <div data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.selectedDvd" class="card-text scrollable" style="min-width: 100%">
-          <div data-ng-repeat="dvd in $ctrl.selectedDvd" data-as-sortable-item class="">
+          <div data-ng-repeat="selectedDvd in $ctrl.selectedDvd" data-as-sortable-item class="">
 
-            <p data-as-sortable-item-handle>{{dvd.title}}</p>
-            <p>{{dvd.body}}</p>
+            <p data-as-sortable-item-handle>{{selectedDvd.title}}</p>
+            <p>{{selectedDvd.body}}</p>
+
           </div>
         </div>
-        <a href="#" class="btn btn-primary">Click to save your workout</a>
+        <a href="" ng-click="$ctrl.addWorkout()"class="btn btn-primary">Click to save your workout</a>
       </div>
     </div>
   </div>

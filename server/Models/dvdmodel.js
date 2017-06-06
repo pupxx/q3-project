@@ -15,6 +15,12 @@ class Dvd {
     return knex('workouts')
   }
 
+  // POST dvd created workout
+  static createDvdSession(){
+    return knex('dvd_sessions')
+    console.log('this is in the model');
+  }
+
 }
 
 

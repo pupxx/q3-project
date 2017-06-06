@@ -22,6 +22,18 @@ function getAllWorkouts(req, res){
   })
 }
 
+function createDvdSession(req, res){
+  let workout = {
+     user_id: req.body.user_id,
+     name: 'Our Test Workout',
+     workout_id: req.body.workout_id[0].id
+  }
+
+  dvd.createDvdSession().insert(workout).returning('*').then((result)=>{
+    console.log(result);
+  })
+}
+
 module.exports = {
-  getAll, getAllWorkouts
+  getAll, getAllWorkouts, createDvdSession
 }

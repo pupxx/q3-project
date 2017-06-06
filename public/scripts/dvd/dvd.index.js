@@ -10,19 +10,30 @@
   function controller (baseUrl, $http){
     const vm = this
 
+    vm.addWorkout = addWorkout
+
     vm.$onInit = function (){
       $http.get(`${baseUrl}/api/dvd`).then((allDvd)=>{
         vm.dvds = allDvd.data
-        console.log(vm.dvds);
       })
     }
 
     vm.selectedDvd = []
+    vm.dragControlListeners = {}
 
-    vm.dragControlListeners = {
 
-     }
+  function addWorkout(){
+   let workout = {
+     user_id: 1,
+     workout_id: vm.selectedDvd
+   }
+   $http.post('/api/dvd-session', workout).then(function (response) {
+      console.log('yoooo');
+      console.log(response.data);
+      })
+console.log(workout);
 
+  }
 
   }
 })()

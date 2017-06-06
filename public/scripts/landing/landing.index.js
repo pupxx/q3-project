@@ -14,8 +14,6 @@ console.log('index.js is connected');
       console.log('LANDING.INDEX.JS');
       let today = moment(new Date()).format('YYYY-MM-DD')
       let aWeekAgo = moment().subtract(7,'d').format('YYYY-MM-DD');
-      console.log('today is ', today);
-      console.log('aWeekAgo is ', aWeekAgo)
 
       $http.get(`${baseUrl}/api/landing`).then((result)=>{
         temp = result.data
@@ -24,13 +22,12 @@ console.log('index.js is connected');
             let workoutDate = moment(element.date).format('YYYY-MM-DD')
             if (moment(workoutDate).isAfter(aWeekAgo)) {
               element.date = workoutDate
-              console.log('element.date / workout date is', element.date);
+              console.log('element.date / workout date is', element.date)
               return element
             }
   	      })
           console.log('newArray is ', vm.newArray);
 
-        // console.log(vm.result)
       })
     }
 

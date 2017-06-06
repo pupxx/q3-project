@@ -1,37 +1,32 @@
 <div class="container text-center">
 <h3>This is the area below the navbar - it is full-width</h3><br>
-<div class="row bordered">
+<div class="row">
   <div class="col-sm-4">
-    <img src="https://placehold.it/150x150?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    <p>First card would go here </p>
+    <img src="https://previews.123rf.com/images/tonobalaguer/tonobalaguer1404/tonobalaguer140400538/27491406-Rope-Climb-exercise-woman-workout-at-gym-climbing-Stock-Photo-crossfit.jpg" class="img-responsive card-main" style="width:100%" alt="Image">
+    <p>SUGGESTED WORKOUT</p>
   </div>
   <div class="col-sm-4">
-    <img src="https://placehold.it/150x150?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    <p>Second card here</p>
+    <img src="http://875westend.com/875bluefoxhouseboat/wp-content/uploads/weightlifter-bw.jpg" class="img-responsive card-main" style="width:100%" alt="Image">
+    <p>CREATE A WORKOUT</p>
   </div>
   <div class="col-sm-4">
-    <img src="https://placehold.it/150x150?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    <p>Third card here</p>
+    <img src="https://s-media-cache-ak0.pinimg.com/736x/69/bb/f9/69bbf933e7eb89e83948f2837e7ad740.jpg" class="img-responsive card-main" style="width:100%" alt="Image">
+    <p>WORKOUT HISTORY</p>
   </div>
 </div> <!-- ROW -->
 <div class="row">
-  <div class="col-sm-4 bordered">
-    <div class="image-container">
-      <img src="https://placehold.it/100x130?text=IMAGE" class="img-responsive splash-pic" alt="image">
-    </div>
+  <div class="col-sm-4">
     <div class="quote-container">
-      This will have the inspirational quote
+      <h3>Sore Today, Strong Tomorrow</h3>
     </div>
   </div> <!-- COLUMN -->
 
-
-  <!-- ATTEMPT TO DISPLAY TEXT OVER IMAGE -->
-  <div class="col-sm-8 bordered calendar-container">
+  <div class="col-sm-8 calendar-container">
     <div ng-repeat="day in $ctrl.newArray" >
       <div class="outer">
         <div class="bottomleft">
           <p>{{day.calories_burned}}</p><p>{{day.date}}</p>
         </div> <!-- REPEAT -->
-      </div> <!-- COLUMN -->
+      </div> <!-- OUTER -->
     </div> <!-- ROW -->
-  </div>
+  </div> <!-- COLUMN -->

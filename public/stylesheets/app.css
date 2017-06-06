@@ -77,8 +77,45 @@ body {
   padding: 1px;
 }
 
-/* line 65, ../scss/app.scss */
+/* line 61, ../scss/app.scss */
 .splash-pic {
   height: 100px;
   width: 130px;
+}
+
+/* line 67, ../scss/app.scss */
+.calendar-container {
+  display: flex;
+}
+
+/* line 71, ../scss/app.scss */
+.outer {
+  position: relative;
+  background: url("https://placehold.it/100x75?text=IMAGE");
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+}
+
+/* line 78, ../scss/app.scss */
+.bottomleft {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0.5em;
+  width: 90px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* line 87, ../scss/app.scss */
+.topright {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  width: 120px;
+  padding: 4px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 11px;
 }

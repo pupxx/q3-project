@@ -9,20 +9,28 @@ console.log('index.js is connected');
   controller.$inject = ['API_BASE_URL', '$http']
   function controller (baseUrl, $http){
     const vm = this
-    console.log('!!!')
 
     vm.$onInit = function (){
-      console.log('landing index js');
-      let today = new Date()
-      let formattedToday = moment(today).format('YYYY-MM-DD')
-      let dateFrom = moment().subtract(7,'d').format('YYYY-MM-DD');
-      console.log('formattedToday is ', formattedToday);
-
-      console.log('dateFrom is ', dateFrom)
+      console.log('LANDING.INDEX.JS');
+      let today = moment(new Date()).format('YYYY-MM-DD')
+      let aWeekAgo = moment().subtract(7,'d').format('YYYY-MM-DD');
+      console.log('today is ', today);
+      console.log('aWeekAgo is ', aWeekAgo)
 
       $http.get(`${baseUrl}/api/landing`).then((result)=>{
-        vm.result = result.data
-        console.log(vm.result);
+        temp = result.data
+        console.log('all data is: ', temp);
+        vm.newArray = temp.map(function(element) {
+            let workoutDate = moment(element.date).format('YYYY-MM-DD')
+            if (moment(workoutDate).isAfter(aWeekAgo)) {
+              element.date = workoutDate
+              console.log('element.date / workout date is', element.date);
+              return element
+            }
+  	      })
+          console.log('newArray is ', vm.newArray);
+
+        // console.log(vm.result)
       })
     }
 

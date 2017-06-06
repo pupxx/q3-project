@@ -1,11 +1,16 @@
-/* line 6, ../scss/app.scss */
+/* line 9, ../scss/app.scss */
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: white;
+  background-color: #7C7873;
 }
 
-/* line 12, ../scss/app.scss */
+/* line 15, ../scss/app.scss */
+.banner {
+  background: radial-gradient(#ffffff, #7c7873);
+}
+
+/* line 19, ../scss/app.scss */
 .scrollable {
   height: 400px;
   max-height: 400px;
@@ -15,39 +20,40 @@ body {
   border: 1px solid transparent;
 }
 
-/* line 21, ../scss/app.scss */
+/* line 28, ../scss/app.scss */
 .badge {
   background-color: rgba(121, 139, 161, 0.8) !important;
 }
 
-/* line 26, ../scss/app.scss */
+/* line 32, ../scss/app.scss */
 .bordered {
   border-style: solid;
   border-width: 2px;
   padding: 1px;
 }
 
-/* line 32, ../scss/app.scss */
+/* line 38, ../scss/app.scss */
 .splash-pic {
   height: 100px;
   width: 170px;
 }
 
-/* line 37, ../scss/app.scss */
+/* line 43, ../scss/app.scss */
 .quote-container {
-  background: rgba(121, 139, 161, 0.8);
+  background: rgba(20, 20, 20, 0.75);
   display: inline-block;
   width: 100%;
   float: left;
   height: 100px;
+  color: white;
 }
 
-/* line 45, ../scss/app.scss */
+/* line 52, ../scss/app.scss */
 .calendar-container {
   display: flex;
 }
 
-/* line 49, ../scss/app.scss */
+/* line 56, ../scss/app.scss */
 .outer {
   position: relative;
   background: url("https://placehold.it/100x60?text=IMAGE");
@@ -56,7 +62,7 @@ body {
   border: 2px solid white;
 }
 
-/* line 57, ../scss/app.scss */
+/* line 64, ../scss/app.scss */
 .bottomleft {
   display: inline-block;
   position: absolute;
@@ -67,7 +73,7 @@ body {
   color: #000;
 }
 
-/* line 67, ../scss/app.scss */
+/* line 74, ../scss/app.scss */
 .card-main {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

@@ -2,15 +2,15 @@
 <h3>This is the area below the navbar - it is full-width</h3><br>
 <div class="row bordered">
   <div class="col-sm-4">
-    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <img src="https://placehold.it/150x150?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     <p>First card would go here </p>
   </div>
   <div class="col-sm-4">
-    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <img src="https://placehold.it/150x150?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     <p>Second card here</p>
   </div>
   <div class="col-sm-4">
-    <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <img src="https://placehold.it/150x150?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     <p>Third card here</p>
   </div>
 </div> <!-- ROW -->
@@ -24,17 +24,14 @@
     </div>
   </div> <!-- COLUMN -->
 
-  <div class="col-sm-8 bordered">
-    <div class="calendar-container">
-      {{$ctrl.result}}
-      <!-- <img src="https://placehold.it/100x100?text=IMAGE" class="" alt="Image">
-      <img src="https://placehold.it/100x100?text=IMAGE" class="" alt="Image">
-      <img src="https://placehold.it/100x100?text=IMAGE" class="" alt="Image">
-      <img src="https://placehold.it/100x100?text=IMAGE" class="" alt="Image">
-      <img src="https://placehold.it/100x100?text=IMAGE" class="" alt="Image">
-      <img src="https://placehold.it/100x100?text=IMAGE" class="" alt="Image">
-      <img src="https://placehold.it/100x100?text=IMAGE" class="" alt="Image"> -->
-    </div
+
+  <!-- ATTEMPT TO DISPLAY TEXT OVER IMAGE -->
+  <div class="col-sm-8 bordered calendar-container">
+    <div ng-repeat="day in $ctrl.newArray" >
+      <div class="outer">
+        <div class="bottomleft">
+          <p>{{day.calories_burned}}</p><p>{{day.date}}</p>
+        </div> <!-- REPEAT -->
+      </div> <!-- COLUMN -->
+    </div> <!-- ROW -->
   </div>
-</div> <!-- ROW -->
-</div><br>

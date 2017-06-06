@@ -11,11 +11,11 @@ body {
 /**
 BANNER
 */
-/* line 23, ../scss/app.scss */
+/* line 24, ../scss/app.scss */
 .banner {
   background: radial-gradient(#ffffff, #7c7873);
 }
-/* line 26, ../scss/app.scss */
+/* line 27, ../scss/app.scss */
 .banner h3 {
   color: #E8E7E6;
 }
@@ -23,29 +23,74 @@ BANNER
 /**
 CARDS
 */
-/* line 35, ../scss/app.scss */
+/* line 36, ../scss/app.scss */
 .card-main .card-image {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 39, ../scss/app.scss */
+/* line 40, ../scss/app.scss */
 .card-main .hover-fun {
   transition: opacity .5s, transform .3s;
 }
-/* line 43, ../scss/app.scss */
+/* line 44, ../scss/app.scss */
 .card-main .hover-fun:hover {
   opacity: .5;
   transform: scale(1.01);
 }
 
-/* line 49, ../scss/app.scss */
+/* line 50, ../scss/app.scss */
 .card-text {
   background: white;
+}
+
+/* line 54, ../scss/app.scss */
+.middle-card-container {
+  position: relative;
+  width: 50%;
+}
+
+/* line 59, ../scss/app.scss */
+.middle-card-image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+/* line 68, ../scss/app.scss */
+.middle-card {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* line 78, ../scss/app.scss */
+.middle-card-container:hover .middle-card-image {
+  opacity: 0.3;
+}
+
+/* line 82, ../scss/app.scss */
+.container:hover .middle-card {
+  opacity: 1;
+}
+
+/* line 86, ../scss/app.scss */
+.middle-card-text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
 }
 
 /**
 QUOTE
 */
-/* line 56, ../scss/app.scss */
+/* line 96, ../scss/app.scss */
 .quote-container {
   background: rgba(20, 20, 20, 0.75);
   display: inline-block;
@@ -54,7 +99,7 @@ QUOTE
   height: 100px;
   color: white;
 }
-/* line 64, ../scss/app.scss */
+/* line 104, ../scss/app.scss */
 .quote-container h3 {
   text-shadow: 0 0 3px #7C7873;
 }
@@ -62,11 +107,11 @@ QUOTE
 /**
 7-DAY CALENDAR
 */
-/* line 72, ../scss/app.scss */
+/* line 112, ../scss/app.scss */
 .calendar-container {
   display: flex;
 }
-/* line 75, ../scss/app.scss */
+/* line 115, ../scss/app.scss */
 .calendar-container .outer {
   position: relative;
   background: white;
@@ -74,7 +119,7 @@ QUOTE
   height: 100px;
   border: 2px solid white;
 }
-/* line 83, ../scss/app.scss */
+/* line 123, ../scss/app.scss */
 .calendar-container .outer .bottomleft {
   display: inline-block;
   position: absolute;
@@ -88,12 +133,12 @@ QUOTE
 /**
 
 */
-/* line 98, ../scss/app.scss */
+/* line 138, ../scss/app.scss */
 .badge {
   background-color: rgba(121, 139, 161, 0.8) !important;
 }
 
-/* line 102, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 .scrollable {
   height: 400px;
   max-height: 400px;
@@ -103,7 +148,7 @@ QUOTE
   border: 1px solid transparent;
 }
 
-/* line 111, ../scss/app.scss */
+/* line 151, ../scss/app.scss */
 .bordered {
   border-style: solid;
   border-width: 2px;

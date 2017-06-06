@@ -17,7 +17,11 @@
       })
     }
 
+    vm.selectedDvd = []
 
+    vm.dragControlListeners = {
+
+     }
 
 
   }

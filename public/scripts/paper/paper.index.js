@@ -1,4 +1,4 @@
-console.log('index.js is connected');
+
 (function(){
   angular.module('app')
   .component('paperIndex', {
@@ -9,14 +9,12 @@ console.log('index.js is connected');
   controller.$inject = ['API_BASE_URL', '$http']
   function controller (baseUrl, $http){
     const vm = this
-    console.log('!!!')
 
     vm.$onInit = function (){
-      console.log('paper index js');
-      // $http.get(`${baseUrl}/api/posts`).then((posts)=>{
-      //   vm.posts = posts.data
-      //   console.log(vm.posts);
-      // })
+      $http.get(`${baseUrl}/api/build-from-exercises`).then((allPaper)=>{
+        vm.paper = allPaper.data
+        console.log(vm.paper);
+      })
     }
 
 

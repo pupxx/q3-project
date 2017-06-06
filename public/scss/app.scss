@@ -14,6 +14,7 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #7C7873;
+  margin-bottom: 60px;
 }
 
 /**
@@ -43,6 +44,11 @@ CARDS
     opacity: .5;
     transform: scale(1.01);
   }
+}
+
+.card-text {
+  background: white;
+
 }
 
 /**
@@ -106,4 +112,44 @@ QUOTE
   border-style: solid;
   border-width: 2px;
   padding: 1px;
+}
+
+
+/**
+FOOTER
+*/
+-------------------------------------------------- */
+// html {
+//   position: relative;
+//   min-height: 100%;
+// }
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 280px;
+  background:
+  /* color overlay */
+    linear-gradient(
+      $body-background,
+      $recurring-blue
+    )
+}
+
+
+/* Custom footer CSS
+-------------------------------------------------- */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+.footertext {
+  color: #ffffff;
 }

@@ -28,6 +28,15 @@ console.log('config file connected');
     .state({
       name: 'dvdIndex', url: '/dvd', component: 'dvdIndex'
     })
+
+    .state({
+      name: 'showDvdSession', url: '/dvd-session', component: 'showDvdSession'
+    })
+
+    .state({
+      name: 'showPaperSession', url: '/paper-session', component: 'showPaperSession'
+    })
+
     // .state({
     //   name: 'story.show', url: '/stories/:id', component: 'stories.show'
     // })

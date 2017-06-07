@@ -8,7 +8,7 @@
 
     <div class="col-sm-4 card-main">
       <div class="middle-card-container">
-        <img src="http://875westend.com/875bluefoxhouseboat/wp-content/uploads/weightlifter-bw.jpg" class="middle-card-image img-responsive"  alt="Man with Barbell">
+        <img src="http://875westend.com/875bluefoxhouseboat/wp-content/uploads/weightlifter-bw.jpg" class="hover-fun img-responsive card-image middle-card-image"  alt="Man with Barbell">
         <div class="middle-card">
           <div class="middle-card-text">
             <a ui-sref="dvdIndex">CREATE A DVD WORKOUT</a><br><br>
@@ -36,7 +36,7 @@
       <div ng-repeat="day in $ctrl.lastSevenDays track by $index">
         <div class="outer calendar-summary">
           <div class="bottomleft">
-            {{day}}
+            <p>{{day}}</p>
             <div ng-repeat="workout in $ctrl.newArray track by $index">
               <div ng-if="workout.date == day">
                 <p>{{workout.calories_burned}} cal</p>

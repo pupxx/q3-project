@@ -1,49 +1,51 @@
 <div class="container text-center">
-  <p>{{$ctrl.dvds}}</p>
-<h3>THIS IS DVD.INDEX.HTML</h3><br>
-<div class="row">
-  <h3>List of category badges will go here</h3>
-  <span class="badge">Default</span>
-  <span class="badge badge-primary">Primary</span>
-  <span class="badge badge-success">Success</span>
+  <p>{{$ctrl.dvds[0]}}</p>
+  <h3>THIS IS DVD.INDEX.HTML</h3><br>
+  <div class="row">
+    <h3>List of category badges will go here</h3>
+    <span class="badge">Default</span>
+    <span class="badge badge-primary">Primary</span>
+    <span class="badge badge-success">Success</span>
+  </div>
+  <div class="row bordered">
+    <div class="col-sm-6">
+      <div class="card w-75">
+        <div class="card-block">
+          <h3 class="card-title">DVD List</h3>
+          <div data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.dvds" class="card-text scrollable" style="min-width: 100%">
+            <div data-ng-repeat="dvd in $ctrl.dvds" data-as-sortable-item class="">
+              <p data-as-sortable-item-handle>{{dvd.title}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card w-75">
+        <div class="card-block">
+          <h3 class="card-title">Create Workout</h3>
+          <div data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.selectedDvd" class="card-text scrollable" style="min-width: 100%">
+            <div data-ng-repeat="selectedDvd in $ctrl.selectedDvd" data-as-sortable-item class="">
+
+              <p data-as-sortable-item-handle>{{selectedDvd.title}}</p>
+              <p>{{selectedDvd.body}}</p>
+
+            </div>
+          </div>
+          <a href="" ng-click="$ctrl.addWorkout()" ui-sref="showDvdSession" class="btn btn-primary">Click to save your workout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ROW -->
+
 </div>
-<div class="row bordered">
-  <div class="col-sm-6">
-    <div class="card w-75">
-      <div class="card-block">
-        <h3 class="card-title">DVD List</h3>
-        <div data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.dvds" class="card-text scrollable" style="min-width: 100%">
-          <div data-ng-repeat="dvd in $ctrl.dvds" data-as-sortable-item class="">
-            <p data-as-sortable-item-handle>{{dvd.title}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card w-75">
-      <div class="card-block">
-        <h3 class="card-title">Create Workout</h3>
-        <div data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.selectedDvd" class="card-text scrollable" style="min-width: 100%">
-          <div data-ng-repeat="selectedDvd in $ctrl.selectedDvd" data-as-sortable-item class="">
-
-            <p data-as-sortable-item-handle>{{selectedDvd.title}}</p>
-            <p>{{selectedDvd.body}}</p>
-
-          </div>
-        </div>
-        <a href="" ng-click="$ctrl.addWorkout()" ui-sref="showDvdSession" class="btn btn-primary">Click to save your workout</a>
-      </div>
-    </div>
-  </div>
-</div> <!-- ROW -->
-
-</div> <!-- ROW -->
+<!-- ROW -->
 
 <ul data-as-sortable="board.dragControlListeners" data-ng-model="$ctrl.items">
   {{$ctrl.items}}
-   <li data-ng-repeat="item in $ctrl.items" data-as-sortable-item>
-      <div data-as-sortable-item-handle>{{item}}</div>
-   </li>
+  <li data-ng-repeat="item in $ctrl.items" data-as-sortable-item>
+    <div data-as-sortable-item-handle>{{item}}</div>
+  </li>
 </ul>
 </div><br>

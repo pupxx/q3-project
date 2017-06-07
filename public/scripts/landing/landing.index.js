@@ -27,8 +27,8 @@ console.log('index.js is connected');
     vm.$onInit = function (){
       let today = moment(new Date())
       let aWeekAgo = moment().subtract(7,'d')
-      let lastSevenDays = vm.getDateRange(aWeekAgo, today)
       let lazySlug = 'No workout'
+      vm.lastSevenDays = vm.getDateRange(aWeekAgo, today)
 
       $http.get(`${baseUrl}/api/landing`).then((result)=>{
         let temp = result.data

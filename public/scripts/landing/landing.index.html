@@ -27,19 +27,23 @@
   </div> <!-- ROW -->
 
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="quote-container">
         <h3>Sore Today,</br>Strong Tomorrow</h3>
       </div> <!-- QUOTE CONTAINER -->
     </div> <!-- COLUMN -->
 
-    <div class="col-sm-8 calendar-container">
-      <div ng-repeat="day in $ctrl.newArray track by $index" >
-        <div class="outer">
+    <div class="col-sm-9 calendar-container">
+      <div ng-repeat="day in $ctrl.lastSevenDays track by $index">
+        <div class="outer calendar-summary">
           <div class="bottomleft">
-            <p>{{day.dayOfWeek}}</p>
-            <p>{{day.date}}</p>
-            <p>{{day.calories_burned}} cal</p>
+            <div ng-repeat="workout in $ctrl.newArray">
+              <div ng-if="workout.date == day">
+                <p>hey</p>
+              </div>
+            </div>
+            <!-- <p>{{day.date}}</p>
+            <p>{{day.calories_burned}} cal</p> -->
           </div> <!-- BOTTOM LEFT -->
         </div> <!-- OUTER -->
       </div> <!-- REPEAT -->

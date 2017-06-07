@@ -38,11 +38,11 @@
         <div class="outer calendar-summary">
           <div class="bottomleft">
             {{day}}
-            <div ng-repeat="workout in $ctrl.newArray track by $index">
-              <div ng-if="workout.date == day">
-                <p>hey</p>
+            <div ng-repeat="workout in $ctrl.newArray.date track by $index">
+              <div ng-if="workout.formattedDate == day">
+                <p>{{workout.date}}</p>
               </div>
-            </div>
+            </div> <!-- REPEAT -->
           </div> <!-- BOTTOM LEFT -->
         </div> <!-- OUTER -->
       </div> <!-- REPEAT -->

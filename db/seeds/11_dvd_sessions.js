@@ -33,7 +33,7 @@ exports.seed = function(knex) {
         average_heart_rate: 122,
         max_heart_rate: 135,
         notes: 'Felt a bit sluggish today.  Make sure to have enough calories in before working out.',
-        user_id: 2,
+        user_id: 1,
         workout_id: 2,
         created_at: new Date(),
         updated_at: new Date()
@@ -45,7 +45,7 @@ exports.seed = function(knex) {
         average_heart_rate: 118,
         max_heart_rate: 130,
         notes: 'Never again.',
-        user_id: 2,
+        user_id: 1,
         workout_id: 1,
         created_at: new Date(),
         updated_at: new Date()
@@ -57,7 +57,7 @@ exports.seed = function(knex) {
         average_heart_rate: 142,
         max_heart_rate: 171,
         notes: 'Definitely want to do this one again! Remember to get step out first though.',
-        user_id: 2,
+        user_id: 1,
         workout_id: 3,
         created_at: new Date(),
         updated_at: new Date()
@@ -69,7 +69,7 @@ exports.seed = function(knex) {
         average_heart_rate: 133,
         max_heart_rate: 149,
         notes: 'Wish the music were better.',
-        user_id: 2,
+        user_id: 1,
         workout_id: 3,
         created_at: new Date(),
         updated_at: new Date()

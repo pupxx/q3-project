@@ -9,6 +9,7 @@
 
 
   function dvdService(baseUrl, $http) {
+
     this.singleDvdWorkout;
 
     this.postWorkout = (workout) => {
@@ -22,6 +23,8 @@
     this.getDvds = function(){
       return $http.get(`${baseUrl}/api/dvd`)
     }
+
+
   }
 
 })()

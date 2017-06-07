@@ -9,14 +9,7 @@ console.log('config file connected');
     $locationProvider.html5Mode(true)
     //
     $stateProvider
-    // .state({
-    //   // NOTE: What is redirectTo doing? What is its value?
-    //   name: 'home', url: '/', redirectTo: 'story.index'
-    // })
-    // .state({
-    //   // NOTE: What is this doing?
-    //   name: 'story', templateUrl: './scripts/stories/template.html'
-    // })
+  
     .state({
       name: 'landingIndex', url: '/home', component: 'landingIndex'
     })

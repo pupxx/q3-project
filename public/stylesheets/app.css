@@ -47,8 +47,9 @@ CARDS
 .middle-card-container {
   position: relative;
   width: 100%;
+  height: 100px;
 }
-/* line 59, ../scss/app.scss */
+/* line 60, ../scss/app.scss */
 .middle-card-container .middle-card-image {
   opacity: 1;
   display: block;
@@ -57,7 +58,7 @@ CARDS
   transition: .5s ease;
   backface-visibility: hidden;
 }
-/* line 69, ../scss/app.scss */
+/* line 70, ../scss/app.scss */
 .middle-card-container .middle-card {
   transition: .5s ease;
   opacity: 0;
@@ -67,28 +68,28 @@ CARDS
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/* line 78, ../scss/app.scss */
+/* line 79, ../scss/app.scss */
 .middle-card-container .middle-card a {
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 84, ../scss/app.scss */
+/* line 85, ../scss/app.scss */
 .middle-card-container .middle-card a:hover {
   color: rgba(121, 139, 161, 0.8);
 }
 
-/* line 92, ../scss/app.scss */
+/* line 93, ../scss/app.scss */
 .middle-card-container:hover .middle-card-image {
   opacity: 0.3;
 }
 
-/* line 96, ../scss/app.scss */
+/* line 97, ../scss/app.scss */
 .middle-card-container:hover .middle-card {
   opacity: 1;
 }
 
-/* line 100, ../scss/app.scss */
+/* line 101, ../scss/app.scss */
 .middle-card-text {
   background: rgba(20, 20, 20, 0.75);
   color: white;
@@ -99,7 +100,7 @@ CARDS
 /**
 QUOTE
 */
-/* line 110, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 .quote-container {
   background: rgba(20, 20, 20, 0.75);
   display: inline-block;
@@ -109,7 +110,7 @@ QUOTE
   color: white;
   margin: 6px;
 }
-/* line 119, ../scss/app.scss */
+/* line 120, ../scss/app.scss */
 .quote-container h3 {
   text-shadow: 0 0 3px #7C7873;
   font-family: 'Finger Paint', cursive;
@@ -118,11 +119,11 @@ QUOTE
 /**
 7-DAY CALENDAR
 */
-/* line 128, ../scss/app.scss */
+/* line 129, ../scss/app.scss */
 .calendar-container {
   display: flex;
 }
-/* line 131, ../scss/app.scss */
+/* line 132, ../scss/app.scss */
 .calendar-container .outer {
   position: relative;
   background: white;
@@ -130,7 +131,7 @@ QUOTE
   height: 100px;
   border: 2px solid white;
 }
-/* line 139, ../scss/app.scss */
+/* line 140, ../scss/app.scss */
 .calendar-container .outer .bottomleft {
   display: inline-block;
   position: absolute;
@@ -140,7 +141,7 @@ QUOTE
   font-weight: bold;
   color: #000;
 }
-/* line 150, ../scss/app.scss */
+/* line 151, ../scss/app.scss */
 .calendar-container .calendar-summary {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -148,12 +149,12 @@ QUOTE
 /**
 
 */
-/* line 158, ../scss/app.scss */
+/* line 159, ../scss/app.scss */
 .badge {
   background-color: rgba(121, 139, 161, 0.8) !important;
 }
 
-/* line 162, ../scss/app.scss */
+/* line 163, ../scss/app.scss */
 .scrollable {
   height: 400px;
   max-height: 400px;
@@ -163,7 +164,7 @@ QUOTE
   border: 1px solid transparent;
 }
 
-/* line 171, ../scss/app.scss */
+/* line 172, ../scss/app.scss */
 .bordered {
   border-style: solid;
   border-width: 2px;

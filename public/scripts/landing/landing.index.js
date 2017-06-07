@@ -28,32 +28,33 @@ console.log('index.js is connected');
       let today = moment(new Date())
       let aWeekAgo = moment().subtract(7,'d')
       let lazySlug = 'No workout'
-      vm.lastSevenDays = vm.getDateRange(aWeekAgo, today)
-      vm.formattedLastSevenDays = vm.getDateRange(aWeekAgo, today)
 
+
+      vm.lastSevenDays = vm.getDateRange(aWeekAgo, today)
       $http.get(`${baseUrl}/api/landing`).then((result)=>{
         let temp = result.data
-
         // make an array of all workouts that occurred in the last week
         vm.newArray = temp.map(function(element) {
           let workoutDate = moment(element.date).format('YYYY-MM-DD')
+          console.log('workout date i s', workoutDate);
+          console.log('type of is ', typeof workoutDate);
           let dayOfWeek = moment(element.date).format('dddd')
 
           if (moment(workoutDate).isAfter(aWeekAgo)) {
             element.date = moment(workoutDate).format('YYYY-MM-DD')
+            element.formattedDate = (moment(workoutDate).format('YYYY-MM-DD')).toString()
             element.displayDate = moment(workoutDate).format('DD/MM')
             element.dayOfWeek = dayOfWeek
             element.noWorkout = ''
-          }
-          console.log('element', element);
+            return element
 
-          return element
+          }
 
 	      }) // end map
 
       })
       .then(() => {
-        console.log(vm.newArray);
+        console.log('new array is ', vm.newArray);
       })
     }
 

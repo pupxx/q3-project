@@ -1,40 +1,44 @@
-
 <div class="container text-center">
-<h3>THIS IS PAPER.INDEX.HTML</h3><br>
-<p>{{$ctrl.exercises}}</p>
-<div class="row">
-  <h3>List of category badges will go here</h3>
-  <span class="badge badge-default">Default</span>
-  <span class="badge badge-primary">Primary</span>
-  <span class="badge badge-success">Success</span>
-</div>
-<div class="row bordered">
-  <div class="col-sm-6">
-    <div class="card w-75">
-      <div class="card-block">
-        <h3 class="card-title">Exercise List</h3>
-        <div class="card-text scrollable" style="min-width: 100%">
-          <div ng-repeat="exercise in $ctrl.exercises" class="">
-            <p>{{exercise.exercise_name}}</p>
+  <h3>THIS IS PAPER.INDEX.HTML</h3><br>
+  <p>{{$ctrl.exercises}}</p>
+  <div class="row">
+    <h3>List of category badges will go here</h3>
+    <span class="badge badge-default">Default</span>
+    <span class="badge badge-primary">Primary</span>
+    <span class="badge badge-success">Success</span>
+  </div>
+  <div class="row bordered">
+    <div class="col-sm-6">
+      <div class="card w-75">
+        <div class="card-block">
+          <h3 class="card-title">Exercise List</h3>
+          <div data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.exercises" class="card-text scrollable" style="min-width: 100%">
+            <div data-ng-repeat="exercise in $ctrl.exercises" data-as-sortable-item class="">
+              <p data-as-sortable-item-handle>{{exercise.exercise_name}}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card w-75">
-      <div class="card-block">
-        <h3 class="card-title">Create Workout</h3>
-        <div class="card-text scrollable" style="min-width: 100%">
-          <div class="">
-            
-          </div>
-        </div>
-        <a href="#" class="btn btn-primary">Click to save your workout</a>
-      </div>
-    </div>
-  </div>
-</div> <!-- ROW -->
+    <div class="col-sm-6">
+      <div class="card w-75">
+        <div class="card-block">
+          <h3 class="card-title">Create Workout</h3>
+          <div data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.selectedExercises" class="card-text scrollable" style="min-width: 100%">
+            <div data-ng-repeat="selectedExercise in $ctrl.selectedExercises" data-as-sortable-item class="">
 
-</div> <!-- ROW -->
+              <p data-as-sortable-item-handle>{{selectedExercise.exercise_name}}</p>
+              <!-- <p>{{selectedDvd.body}}</p> -->
+
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">Click to save your workout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ROW -->
+
+</div>
+<!-- ROW -->
 </div><br>

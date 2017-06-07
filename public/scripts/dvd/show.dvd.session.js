@@ -10,13 +10,10 @@ console.log('show.dvd.session.js is connected');
   function controller (baseUrl, $http, dvdService){
     const vm = this
 
-    // vm.singleDvdWorkout = dvdService.singleDvdWorkout
-
-
 
     vm.$onInit = function (){
+      console.log(Date.now());
       console.log('show dvd session js');
-      console.log('dvd service on init', dvdService);
       vm.singeleDvdWorkout = dvdService.singleDvdWorkout
     }
 

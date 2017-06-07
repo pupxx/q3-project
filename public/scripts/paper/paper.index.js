@@ -6,16 +6,30 @@
     templateUrl: './scripts/paper/paper.index.html'
   })
 
-  controller.$inject = ['API_BASE_URL', '$http']
-  function controller (baseUrl, $http){
+  controller.$inject = ['API_BASE_URL', '$http', 'paperService']
+
+  function controller (baseUrl, $http, paperService){
     const vm = this
 
+    console.log(paperService);
+
+
+    vm.selectedExercises = []
+    vm.dragControlListeners = {
+      itemMoved: function (event) {
+        console.log(vm.selectedExercises)
+      }
+    }
+
     vm.$onInit = function (){
-      $http.get(`${baseUrl}/api/build-from-exercises`).then((allPaper)=>{
-        vm.exercises = allPaper.data
-        console.log(vm.exercises);
+      paperService.getExercises().then((exercises)=>{
+        vm.exercises = exercises.data
+        // console.log(this.exercises);
       })
     }
+
+      console.log(vm.selectedExercises);
+
 
 
 

@@ -37,7 +37,6 @@ console.log('index.js is connected');
         vm.newArray = temp.map(function(element) {
           let workoutDate = moment(element.date).format('YYYY-MM-DD')
           console.log('workout date i s', workoutDate);
-          console.log('type of is ', typeof workoutDate);
           let dayOfWeek = moment(element.date).format('dddd')
 
           if (moment(workoutDate).isAfter(aWeekAgo)) {

@@ -16,7 +16,6 @@
           </div>
         </div>
         <p>CREATE A WORKOUT</p>
-
       </div>
     </div> <!-- COLUMN -->
 
@@ -38,9 +37,9 @@
         <div class="outer calendar-summary">
           <div class="bottomleft">
             {{day}}
-            <div ng-repeat="workout in $ctrl.newArray.date track by $index">
-              <div ng-if="workout.formattedDate == day">
-                <p>{{workout.date}}</p>
+            <div ng-repeat="workout in $ctrl.newArray track by $index">
+              <div ng-if="workout.date == day">
+                <p>{{workout.calories_burned}} cal</p>
               </div>
             </div> <!-- REPEAT -->
           </div> <!-- BOTTOM LEFT -->

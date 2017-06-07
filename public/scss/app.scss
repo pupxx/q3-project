@@ -73,11 +73,21 @@ CARDS
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%);
+
+    a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+    color: $recurring-blue;
+    }
+
   }
 
 }
-
 
 .middle-card-container:hover .middle-card-image {
   opacity: 0.3;

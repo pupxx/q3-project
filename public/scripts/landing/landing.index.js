@@ -45,24 +45,7 @@ console.log('index.js is connected');
             element.noWorkout = ''
             return element
           }
-	      })
-        console.log('newArray is ', vm.newArray);
-        lastSevenDays.forEach((day, index) => {
-          // console.log('day is ', day)
-          console.log(day == vm.newArray[0].date)
-
-          // check to make sure there is a newArray item
-          if (vm.newArray[index]) {
-            if (vm.newArray[index].date == day) {
-              console.log('if')
-            }
-          else {
-            vm.newArray[index].noWorkout = 'No workout'
-            console.log(vm.newArray[index].noWorkout);
-          }
-
-          }
-        })
+	      }) // end map
       })
     }
 

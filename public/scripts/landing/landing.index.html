@@ -8,7 +8,7 @@
 
     <div class="col-sm-4 card-main">
       <div class="middle-card-container">
-        <img src="http://875westend.com/875bluefoxhouseboat/wp-content/uploads/weightlifter-bw.jpg" class="middle-card-image"  alt="Man with Barbell">
+        <img src="http://875westend.com/875bluefoxhouseboat/wp-content/uploads/weightlifter-bw.jpg" class="middle-card-image img-responsive"  alt="Man with Barbell">
         <!-- <p>CREATE A WORKOUT</p> -->
         <div class="middle-card">
           <div class="middle-card-text">
@@ -20,14 +20,6 @@
 
       </div>
     </div> <!-- COLUMN -->
-
-    <!-- <div class="middle-card-container">
-      <img src="img_avatar.png" alt="Avatar" class="middle-card-image" style="width:100%">
-      <div class="middle-card">
-        <div class="middle-card-text">John Doe</div>
-      </div>
-    </div> -->
-
 
     <div class="col-sm-4 card-main">
       <img src="https://s-media-cache-ak0.pinimg.com/736x/69/bb/f9/69bbf933e7eb89e83948f2837e7ad740.jpg" class="hover-fun img-responsive card-image" style="width:100%" alt="Man Doing Squats">
@@ -43,12 +35,12 @@
     </div> <!-- COLUMN -->
 
     <div class="col-sm-8 calendar-container">
-      <div ng-repeat="day in $ctrl.newArray" >
+      <div ng-repeat="day in $ctrl.newArray track by $index" >
         <div class="outer">
           <div class="bottomleft">
-            <p>
-              Calories: {{day.calories_burned}}</p><p>{{day.date}}
-            </p>
+            <p>{{day.dayOfWeek}}</p>
+            <p>{{day.date}}</p>
+            <p>{{day.calories_burned}} cal</p>
           </div> <!-- BOTTOM LEFT -->
         </div> <!-- OUTER -->
       </div> <!-- REPEAT -->

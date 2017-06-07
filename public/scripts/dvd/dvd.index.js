@@ -6,14 +6,14 @@
     templateUrl: './scripts/dvd/dvd.index.html'
   })
 
-  controller.$inject = ['API_BASE_URL', '$http']
-  function controller (baseUrl, $http){
+  controller.$inject = ['API_BASE_URL', '$http', 'dvdService']
+  function controller (baseUrl, $http, dvdService){
     const vm = this
 
     vm.addWorkout = addWorkout
 
     vm.$onInit = function (){
-      $http.get(`${baseUrl}/api/dvd`).then((allDvd)=>{
+      dvdService.getDvds().then((allDvd)=>{
         vm.dvds = allDvd.data
       })
     }
@@ -22,21 +22,15 @@
     vm.dragControlListeners = {}
 
 
-  function addWorkout(){
-   let workout = {
-     user_id: 1,
-     workout_id: vm.selectedDvd
-   }
-   $http.post('/api/dvd-session', workout).then(function (response) {
-      console.log('yoooo');
-      console.log(response);
-      })
+    function addWorkout(){
+      let workout = {
+        user_id: 1,
+        workout_id: vm.selectedDvd
+      }
+      dvdService.postWorkout(workout)
       .catch((err) => {
         console.error(err)
       })
-console.log(workout);
-
-  }
-
+    }
   }
 })()

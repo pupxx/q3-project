@@ -6,20 +6,20 @@ console.log('show.dvd.session.js is connected');
     templateUrl: './scripts/dvd/show.dvd.session.html'
   })
 
-  controller.$inject = ['API_BASE_URL', '$http']
-  function controller (baseUrl, $http){
+  controller.$inject = ['API_BASE_URL', '$http', 'dvdService']
+  function controller (baseUrl, $http, dvdService){
     const vm = this
 
-    
+    // vm.singleDvdWorkout = dvdService.singleDvdWorkout
+
 
 
     vm.$onInit = function (){
       console.log('show dvd session js');
-      // $http.get(`${baseUrl}/api/posts`).then((posts)=>{
-      //   vm.posts = posts.data
-      //   console.log(vm.posts);
-      // })
+      console.log('dvd service on init', dvdService);
+      vm.singeleDvdWorkout = dvdService.singleDvdWorkout
     }
+
 
 
 

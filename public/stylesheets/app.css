@@ -170,3 +170,12 @@ QUOTE
   border-width: 2px;
   padding: 1px;
 }
+
+/** HISTORY CALENDAR */
+/* line 179, ../scss/app.scss */
+.calendar-day {
+  padding: 40px;
+  border-style: solid;
+  border-width: thin;
+  background-color: #c4c2c7;
+}

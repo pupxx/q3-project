@@ -1,12 +1,18 @@
 <div class="container banner text-center">
   <p>{{ $ctrl.history }}</p>
 </div> <!-- CONTAINER / BANNER -->
-<p>{{$ctrl.selectedWorkouts}}</p>
+<p>{{$ctrl.selectedWorkouts[0].dvd_session_name}}
+   {{$ctrl.selectedWorkouts[0].paper_session_name}}
+   {{$ctrl.selectedWorkouts[0].calories_burned}}
+   {{$ctrl.selectedWorkouts[0].date}}
+
+ </p>
 <table>
   <tbody>
-    <tr ng-repeat="week in $ctrl.weeks">week
+    <h3>{{$ctrl.currentMonth}}</h3>
+    <tr ng-repeat="week in $ctrl.weeks">
       <td class="calendar-day" ng-repeat="day in week">
-        <a href="#" ng-click="$ctrl.showDay(day)">{{ day }}</a>
+        <a href="#" ng-mouseover="$ctrl.showDay(day)">{{ day }}</a>
       </td>
     </tr>
   </tbody>

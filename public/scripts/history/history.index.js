@@ -12,6 +12,7 @@
     vm.$onInit = function (){
       $http.get(`${baseUrl}/api/landing`).then((res)=>{
         let calendar = vm.get_calendar(moment().year(), moment().month())
+
         vm.history = res.data
         vm.weeks = calendar.map(function(week){
           dayList = []
@@ -32,11 +33,32 @@
     }
 
     // CALENDAR LINK https://jsfiddle.net/guillaumepiot/fg9mkygo/2/
-    var calendar, endDay, firstDay, firstWeekDay, headerRow, i, j, lastWeekDay, len, len1, month, monthRange, row, startDate, week, weekRange, weeks, year,
-    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+    var calendar,
+    endDay,
+    firstDay,
+    firstWeekDay,
+    i,
+    lastWeekDay,
+    len,
+    month,
+    monthRange,
+    startDate,
+    week,
+    weekRange,
+    weeks,
+    year,
+    indexOf = [].indexOf || function(item) {
+      for (var i = 0, l = this.length; i < l; i++) {
+        if (i in this && this[i] === item)
+        return i;
+      }
+      return -1;
+    };
 
     vm.get_calendar = function (year, month){
       console.log('calendar year and month',year, month);
+      vm.currentMonth = month + 1
+      moment(vm.currentMonth).format('MMMM')
       startDate = moment([year, month]);
       firstDay = moment(startDate).startOf('month');
       endDay = moment(startDate).endOf('month');

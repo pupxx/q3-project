@@ -12,7 +12,8 @@ $quote-gradient: radial-gradient(#fff, $body-background);
 
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Merriweather Sans", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   background-color: #7C7873;
   margin-bottom: 60px;
 }
@@ -54,26 +55,29 @@ CARDS
 .middle-card-container {
     position: relative;
     width: 100%;
+
+  .middle-card-image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+
+  }
+
+  .middle-card {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
 }
 
-.middle-card-image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle-card {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}
 
 .middle-card-container:hover .middle-card-image {
   opacity: 0.3;
@@ -84,7 +88,7 @@ CARDS
 }
 
 .middle-card-text {
-  background-color: #4CAF50;
+  background: rgba(20,20,20,.75);
   color: white;
   font-size: 16px;
   padding: 16px 32px;
@@ -103,6 +107,7 @@ QUOTE
 
   h3 {
     text-shadow: 0 0 3px #7C7873;
+    font-family: 'Finger Paint', cursive;
   }
 }
 

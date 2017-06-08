@@ -1,4 +1,4 @@
-console.log('index.js is connected');
+console.log('landing.index.js is connected');
 (function(){
   angular.module('app')
   .component('landingIndex', {

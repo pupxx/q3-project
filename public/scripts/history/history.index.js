@@ -90,7 +90,6 @@
         weekRange = moment.range(firstWeekDay, lastWeekDay);
         calendar.push(weekRange);
       }
-      console.log(calendar);
       return calendar;
     }
 

@@ -37,11 +37,12 @@
         <div class="outer calendar-summary">
           <!-- <div > -->
             <div class="row" class="bottomleft">
-              <p>{{day}}</p>
+              <p>{{day.dayOfWeek}}</p>
+              <p>{{day.shortDate}}</p>
             </div>
             <div class="row">
               <div ng-repeat="workout in $ctrl.newArray track by $index">
-                <div ng-if="workout.date == day">
+                <div ng-if="workout.date == day.date">
                   <p>{{workout.calories_burned}} cal</p>
                 </div>
               </div>

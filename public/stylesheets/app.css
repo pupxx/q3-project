@@ -175,8 +175,17 @@ QUOTE
 
 /** HISTORY CALENDAR */
 /* line 180, ../scss/app.scss */
+.table {
+  width: 100%;
+}
+/* line 183, ../scss/app.scss */
+.table .tbody {
+  width: 100%;
+}
+
+/* line 188, ../scss/app.scss */
 .calendar-day {
-  padding: 40px;
+  padding: 60px;
   border-style: solid;
   border-width: thin;
   background-color: #c4c2c7;

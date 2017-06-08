@@ -2,13 +2,15 @@
 */
 $box-shadow-card: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-$recurring-blue: rgba(121, 139, 161, 0.8);
-
+$recurring-black: rgba(12, 18, 12, 1);
+$recurring-blue: rgba(125, 152, 161, 0.8);
+$recurring-grey: rgba(109, 114, 117, 0.8);
+$recurring-green: rgba(225, 239, 238, 0.7);
+$recurring-white: rgba(240, 240, 243, 0.8);
+$recurring-charcoal: rgba(20,20,20,.75);
 $body-background: #7C7873;
 
-$navbar-gradient: linear-gradient(#fff, $body-background, #fff);
-
-$quote-gradient: radial-gradient(#fff, $body-background);
+$quote-gradient: radial-gradient($recurring-white, $body-background);
 
 body {
   padding: 50px;
@@ -16,6 +18,14 @@ body {
   font-weight: bold;
   background-color: #7C7873;
   margin-bottom: 60px;
+}
+
+/**
+NAVBAR
+*/
+.our-navbar {
+  background: $recurring-green;
+  color: $recurring-charcoal;
 }
 
 
@@ -27,6 +37,18 @@ BANNER
 
   h3 {
     color: #E8E7E6;
+  }
+}
+
+
+/**
+DVD LIST
+*/
+.dvd-list {
+  background: $quote-gradient;
+
+  h3 {
+    color: $recurring-white;
   }
 }
 
@@ -49,7 +71,7 @@ CARDS
 }
 
 .card-text {
-  background: white;
+  background: $recurring-white;
 }
 
 .middle-card-container {
@@ -67,7 +89,7 @@ CARDS
   -ms-transform: translate(-50%, -50%);
 
   a {
-    color: white;
+    color: $recurring-white;
     font-weight: bold;
     text-decoration: none;
   }
@@ -98,11 +120,17 @@ CARDS
 
 .middle-card-text {
   background: rgba(20,20,20,.75);
-  color: white;
+  color: $recurring-white;
   font-size: 16px;
   padding: 16px 32px;
 }
 
+.card-block {
+  h3 {
+    color: $recurring-black;
+
+  }
+}
 /**
 QUOTE
 */
@@ -112,7 +140,7 @@ QUOTE
   width: 100%;
   float: left;
   height: 100px;
-  color: white;
+  color: $recurring-white;
   margin: 6px;
   vertical-align: top;
 
@@ -130,10 +158,10 @@ QUOTE
 
   .outer {
     position: relative;
-    background: white;
+    background: $recurring-green;
     width: 100px;
     height: 100px;
-    border: 2px solid white;
+    border: 2px solid $recurring-white;
 
 
     .bottomleft {
@@ -175,11 +203,20 @@ QUOTE
   text-align: left;
 }
 
-.bordered {
-  border-style: solid;
-  border-width: 2px;
-  padding: 1px;
+// .bordered {
+//   border-style: solid;
+//   border-width: 2px;
+//   padding: 1px;
+// }
+
+.custom-button {
+  background: $recurring-blue;
 }
+
+.custom-button:hover {
+  background: $recurring-charcoal;
+}
+
 
 /** HISTORY CALENDAR */
 .table {

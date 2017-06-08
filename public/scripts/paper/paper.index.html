@@ -1,13 +1,13 @@
-<div class="container text-center">
-  <h3>THIS IS PAPER.INDEX.HTML</h3><br>
-  <p>{{$ctrl.exercises}}</p>
+<div class="container text-center dvd-list">
+  <h2>DRAG A TITLE FROM THE LEFT TO THE BOX ON THE RIGHT</h2><br>
+  <!-- <p>{{$ctrl.exercises}}</p> -->
   <div class="row">
-    <h3>List of category badges will go here</h3>
-    <span class="badge badge-default">Default</span>
-    <span class="badge badge-primary">Primary</span>
-    <span class="badge badge-success">Success</span>
+    <!-- <h3>List of category badges will go here</h3> -->
+    <span class="badge badge-default">Cardio</span>
+    <span class="badge badge-primary">Upper Body Circuit</span>
+    <span class="badge badge-success">Yoga</span>
   </div>
-  <div class="row bordered">
+  <div class="row">
     <div class="col-sm-6">
       <div class="card w-75">
         <div class="card-block">
@@ -32,7 +32,7 @@
 
             </div>
           </div>
-          <a ui-sref="showPaperSession" ng-click="$ctrl.addPaperSession()" class="btn btn-primary">Click to save your workout</a>
+          <a ui-sref="showPaperSession" ng-click="$ctrl.addPaperSession()" class="btn btn-primary custom-button">Click to save your workout</a>
         </div>
       </div>
     </div>

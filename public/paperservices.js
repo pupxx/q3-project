@@ -16,6 +16,14 @@
       return $http.get(`${baseUrl}/api/build-from-exercises`)
     }
 
+    this.addPaperSession = (paperWorkout) => {
+      return $http.post('/api/paper-session', paperWorkout).then((singlePaperWorkout) => {
+        this.singlePaperWorkout = singlePaperWorkout.data;
+
+        console.log(this.singlePaperWorkout, 'FRONT END');
+      });
+    }
+
 
   }
 

@@ -16,6 +16,14 @@ class Paper {
     return knex('exercises')
   }
 
+  static createPaperSession () {
+    return knex('paper_sessions')
+  }
+
+  static postExercisePaperJoin () {
+    return knex('paper_sessions_exercises_join')
+  }
+
 }
 
 

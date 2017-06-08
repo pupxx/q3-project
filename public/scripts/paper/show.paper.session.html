@@ -1,43 +1,45 @@
 <div class="container text-center">
-<h3>this is show.paper.session.html</h3><br>
-<div class="row">
-  <div class="col-sm-4">
+  <h3>this is show.paper.session.html</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+      <h4>Workout Title</h4>
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <span class="badge">Equipment</span>
+    <span class="badge badge-primary">Equipment</span>
+    <span class="badge badge-success">Equipment</span>
   </div>
-  <div class="col-sm-4">
-    <h4>Workout Title</h4>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="card w-75">
+        <div class="card-block">
+          <h3 class="card-title">Workout Details</h3>
+          <div class="card-text scrollable" style="min-width: 100%">
+            <p>{{ $ctrl.singlePaperWorkout.paper_session_name }}</p>
+          </div>
+          <input type="text" name="" value="calories_burned">
+          <input type="text" name="" value="average_heart_rate">
+          <input type="text" name="" value="max_heart_rate">
+          <input type="text" name="" value="notes">
+          <a href="#" class="btn btn-primary custom-button">Save</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card w-75">
+        <div class="card-block">
+          <h3 class="card-title">Weights</h3>
+          <textarea class="card-text scrollable" style="min-width: 100%">weights</textarea>
+
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-4">
-  </div>
-  <span class="badge">Equipment</span>
-  <span class="badge badge-primary">Equipment</span>
-  <span class="badge badge-success">Equipment</span>
+  <!-- ROW -->
+
 </div>
-<div class="row">
-  <div class="col-sm-9">
-    <div class="card w-75">
-      <div class="card-block">
-        <h3 class="card-title">Workout Details</h3>
-        <textarea class="card-text scrollable" style="min-width: 100%">
-          <p></p>
-        </textarea>
-        <input type="text" name="" value="calories_burned">
-        <input type="text" name="" value="average_heart_rate">
-        <input type="text" name="" value="max_heart_rate">
-        <input type="text" name="" value="notes">
-        <a href="#" class="btn btn-primary custom-button">Save</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card w-75">
-      <div class="card-block">
-        <h3 class="card-title">Weights</h3>
-        <textarea class="card-text scrollable" style="min-width: 100%">weights</textarea>
-
-      </div>
-    </div>
-  </div>
-</div> <!-- ROW -->
-
-</div> <!-- ROW -->
+<!-- ROW -->
 </div><br>

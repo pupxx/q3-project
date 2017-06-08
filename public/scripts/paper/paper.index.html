@@ -28,11 +28,11 @@
             <div data-ng-repeat="selectedExercise in $ctrl.selectedExercises" data-as-sortable-item class="">
 
               <p data-as-sortable-item-handle>{{selectedExercise.exercise_name}}</p>
-              <!-- <p>{{selectedDvd.body}}</p> -->
+
 
             </div>
           </div>
-          <a ui-sref="showPaperSession" ng-click="$ctrl.addPaperSession()" class="btn btn-primary custom-button">Click to save your workout</a>
+          <a ng-click="$ctrl.addPaperSession()" class="btn btn-primary custom-button">Click to save your workout</a>
         </div>
       </div>
     </div>

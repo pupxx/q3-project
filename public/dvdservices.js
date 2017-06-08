@@ -10,7 +10,7 @@
 
   function dvdService(baseUrl, $http) {
 
-    this.singleInstructor;
+
 
     this.postWorkout = (workout) => {
       return $http.post('/api/dvd-session', workout).then((singleWorkout) => {

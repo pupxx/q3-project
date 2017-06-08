@@ -6,9 +6,9 @@
     templateUrl: './scripts/paper/paper.index.html'
   })
 
-  controller.$inject = ['API_BASE_URL', '$http', 'paperService']
+  controller.$inject = ['API_BASE_URL', '$http', 'paperService', '$state']
 
-  function controller (baseUrl, $http, paperService){
+  function controller (baseUrl, $http, paperService, $state){
     const vm = this
 
     // console.log(paperService);
@@ -30,13 +30,14 @@
     // console.log(vm.selectedExercises);
 
     vm.addPaperSession = function () {
-      console.log('!!!!!!!!!!!!');
       let paperWorkout = {
         user_id: 1,
         selectedExercises: vm.selectedExercises
       }
-      console.log(paperWorkout);
-      paperService.addPaperSession(paperWorkout)
+      // console.log(paperWorkout);
+      paperService.addPaperSession(paperWorkout).then(() => {
+        $state.go('showPaperSession')
+      })
     }
 
 

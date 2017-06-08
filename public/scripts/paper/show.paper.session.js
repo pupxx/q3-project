@@ -6,17 +6,13 @@ console.log('show.paper.session.js is connected');
     templateUrl: './scripts/paper/show.paper.session.html'
   })
 
-  controller.$inject = ['API_BASE_URL', '$http']
-  function controller (baseUrl, $http){
+  controller.$inject = ['API_BASE_URL', '$http', 'paperService']
+  function controller (baseUrl, $http, paperService){
     const vm = this
-    console.log('!!!')
 
     vm.$onInit = function (){
-      console.log('show paper session js');
-      // $http.get(`${baseUrl}/api/posts`).then((posts)=>{
-      //   vm.posts = posts.data
-      //   console.log(vm.posts);
-      // })
+      vm.test = 'Hi'
+      vm.singlePaperWorkout = paperService.singlePaperWorkout
     }
 
 

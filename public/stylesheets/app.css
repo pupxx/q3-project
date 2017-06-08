@@ -110,8 +110,9 @@ QUOTE
   height: 100px;
   color: white;
   margin: 6px;
+  vertical-align: top;
 }
-/* line 118, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .quote-container h3 {
   text-shadow: 0 0 3px #7C7873;
   font-family: 'Finger Paint', cursive;
@@ -120,11 +121,11 @@ QUOTE
 /**
 7-DAY CALENDAR
 */
-/* line 127, ../scss/app.scss */
+/* line 128, ../scss/app.scss */
 .calendar-container {
   display: flex;
 }
-/* line 130, ../scss/app.scss */
+/* line 131, ../scss/app.scss */
 .calendar-container .outer {
   position: relative;
   background: white;
@@ -132,7 +133,7 @@ QUOTE
   height: 100px;
   border: 2px solid white;
 }
-/* line 138, ../scss/app.scss */
+/* line 139, ../scss/app.scss */
 .calendar-container .outer .bottomleft {
   display: inline-block;
   position: absolute;
@@ -142,7 +143,7 @@ QUOTE
   font-weight: bold;
   color: #000;
 }
-/* line 149, ../scss/app.scss */
+/* line 150, ../scss/app.scss */
 .calendar-container .calendar-summary {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -150,12 +151,12 @@ QUOTE
 /**
 
 */
-/* line 157, ../scss/app.scss */
+/* line 160, ../scss/app.scss */
 .badge {
   background-color: rgba(121, 139, 161, 0.8) !important;
 }
 
-/* line 161, ../scss/app.scss */
+/* line 164, ../scss/app.scss */
 .scrollable {
   height: 400px;
   max-height: 400px;
@@ -165,7 +166,7 @@ QUOTE
   border: 1px solid transparent;
 }
 
-/* line 170, ../scss/app.scss */
+/* line 173, ../scss/app.scss */
 .bordered {
   border-style: solid;
   border-width: 2px;
@@ -173,7 +174,7 @@ QUOTE
 }
 
 /** HISTORY CALENDAR */
-/* line 177, ../scss/app.scss */
+/* line 180, ../scss/app.scss */
 .calendar-day {
   padding: 40px;
   border-style: solid;

@@ -114,6 +114,7 @@ QUOTE
   height: 100px;
   color: white;
   margin: 6px;
+  vertical-align: top;
 
   h3 {
     text-shadow: 0 0 3px #7C7873;
@@ -148,6 +149,8 @@ QUOTE
 
   .calendar-summary {
     box-shadow: $box-shadow-card;
+
+    
   }
 }
 

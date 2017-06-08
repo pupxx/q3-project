@@ -161,6 +161,7 @@ QUOTE
    background-color: $recurring-blue!important
   }
 
+// ===== DRAG AND DROP AREAS =====
 .scrollable {
   height: 400px;
   max-height: 400px;
@@ -168,6 +169,10 @@ QUOTE
   border-radius: 10px;
   box-shadow: 0 0 0 3px #000;
   border: 1px solid transparent;
+}
+
+.left-justified {
+  text-align: left;
 }
 
 .bordered {

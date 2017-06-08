@@ -22,6 +22,12 @@ exports.seed = function(knex) {
       },{
 		 id: 7,
         equipment_type: 'None',
+      },{
+		 id: 8,
+        equipment_type: '6-inch Step',
+      },{
+		 id: 9,
+        equipment_type: '8-inch Step',
       }]);
     })
     .then(() => {

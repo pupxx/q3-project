@@ -228,9 +228,19 @@ QUOTE
 }
 
 .calendar-day {
-  padding: 60px;
   border-style: solid;
   border-width: thin;
-  background-color: rgb(196, 194, 199);
+  background-color: $recurring-green;
+
+  a {
+    padding: 60px;
+    display: block;
+    color: black;
+  }
+}
+
+.calendar-day:hover {
+
+  background-color: $recurring-blue;
 
 }

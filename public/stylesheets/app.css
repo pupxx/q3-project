@@ -219,8 +219,18 @@ QUOTE
 
 /* line 230, ../scss/app.scss */
 .calendar-day {
-  padding: 60px;
   border-style: solid;
   border-width: thin;
-  background-color: #c4c2c7;
+  background-color: rgba(225, 239, 238, 0.7);
+}
+/* line 235, ../scss/app.scss */
+.calendar-day a {
+  padding: 60px;
+  display: block;
+  color: black;
+}
+
+/* line 242, ../scss/app.scss */
+.calendar-day:hover {
+  background-color: rgba(125, 152, 161, 0.8);
 }

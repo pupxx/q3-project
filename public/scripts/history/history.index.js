@@ -56,9 +56,8 @@
     };
 
     vm.get_calendar = function (year, month){
-      console.log('calendar year and month',year, month);
-      vm.currentMonth = month + 1
-      vm.formattedCurrentMonth = moment(vm.currentMonth).format('MMMM')
+      vm.currentMonth = (month + 1).toString()
+      vm.currentMonth = moment(vm.currentMonth, 'MM').format('MMMM')
       startDate = moment([year, month]);
       firstDay = moment(startDate).startOf('month');
       endDay = moment(startDate).endOf('month');

@@ -44,7 +44,7 @@ exports.seed = function(knex) {
       },{
 		 id: 6,
         title: 'Cardio Core Circuit',
-        body: 'Cathe Friedrichís Cardio Core Circuit (51 min)\n Premixes \n Warm-up (5 min) \nIntervals (39 min)\nRound 1\nSquat digs (30 sec)\nMountain climbers (30 sec)\nApple pull-downs(30 sec)\nRepeat all three\nCore: knee-ins (2 sets of 8)\nRound 2\nHop forward twice, drop to pushup, jump up to standing, 4 jacks (30 sec)\nSumo squats (30 sec) Lateral slides (30 sec)\nRepeat all three\nCore: Triangle choke-holds (12)\nCool-down/Stretch (7 min)',
+        body: 'Warm-up (5 min) \nIntervals (39 min)\nRound 1\nSquat digs (30 sec)\nMountain climbers (30 sec)\nApple pull-downs(30 sec)\nRepeat all three\nCore: knee-ins (2 sets of 8)\nRound 2\nHop forward twice, drop to pushup, jump up to standing, 4 jacks (30 sec)\nSumo squats (30 sec) Lateral slides (30 sec)\nRepeat all three\nCore: Triangle choke-holds (12)\nCool-down/Stretch (7 min)',
         instructor_id: 1,
         workout_category_id: 7,
         created_at: new Date(),

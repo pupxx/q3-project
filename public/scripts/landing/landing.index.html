@@ -41,9 +41,10 @@
               <p>{{day.shortDate}}</p>
             </div>
             <div class="row">
-              <div ng-repeat="workout in $ctrl.newArray track by $index">
+              <div ng-repeat="workout in $ctrl.weeklyWorkouts track by $index">
                 <div ng-if="workout.date == day.date">
                   <p>{{workout.calories_burned}} cal</p>
+                  <p>{{workout.id}}</p>
                 </div>
               </div>
             </div> <!-- REPEAT -->

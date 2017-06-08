@@ -156,7 +156,7 @@ QUOTE
   background-color: rgba(121, 139, 161, 0.8) !important;
 }
 
-/* line 164, ../scss/app.scss */
+/* line 165, ../scss/app.scss */
 .scrollable {
   height: 400px;
   max-height: 400px;
@@ -166,7 +166,12 @@ QUOTE
   border: 1px solid transparent;
 }
 
-/* line 173, ../scss/app.scss */
+/* line 174, ../scss/app.scss */
+.left-justified {
+  text-align: left;
+}
+
+/* line 178, ../scss/app.scss */
 .bordered {
   border-style: solid;
   border-width: 2px;
@@ -174,16 +179,16 @@ QUOTE
 }
 
 /** HISTORY CALENDAR */
-/* line 180, ../scss/app.scss */
+/* line 185, ../scss/app.scss */
 .table {
   width: 100%;
 }
-/* line 183, ../scss/app.scss */
+/* line 188, ../scss/app.scss */
 .table .tbody {
   width: 100%;
 }
 
-/* line 188, ../scss/app.scss */
+/* line 193, ../scss/app.scss */
 .calendar-day {
   padding: 60px;
   border-style: solid;

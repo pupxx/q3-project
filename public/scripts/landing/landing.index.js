@@ -10,7 +10,7 @@ console.log('landing.index.js is connected');
   function controller (baseUrl, $http){
     const vm = this
 
-    // get last 7 days of dates, return it as an array
+    // get last 7 days of dates, return it as an array of strings
     vm.getDateRange = function (begin, end) {
       let now = begin.clone()
       let dates = []
@@ -22,18 +22,6 @@ console.log('landing.index.js is connected');
       return dates
     }
 
-    let tempArray = function (array) {
-      console.log('array is ', array );
-      let tempObject = {}
-      array.map(function(element){
-        tempObject.date = element
-        console.log('tempObject is ', tempObject);
-
-        return
-      })
-    }
-
-
     // INIT
     vm.$onInit = function (){
       let today = moment(new Date())
@@ -41,8 +29,6 @@ console.log('landing.index.js is connected');
       let weekObject = {}
 
       vm.lastSevenDays = vm.getDateRange(aWeekAgo, today)
-      // make an array of objects from vm.lastSevenDays
-      // give each object an assortment of display options
       vm.lastSevenDays = vm.lastSevenDays.map(function(element) {
         element = {
           date: element,
@@ -51,16 +37,18 @@ console.log('landing.index.js is connected');
         }
         return element
       })
-      console.log(vm.lastSevenDays)
 
-      $http.get(`${baseUrl}/api/landing`).then((result)=>{
-        let temp = result.data
-        // make an array of all workouts that occurred in the last week
-        vm.newArray = temp.filter(function(element) {
+      $http.get(`${baseUrl}/api/landing`)
+      .then((result)=>{
+        let workoutSessions = result.data
+        console.log('data is ', result.data);
+        // filter the array of all workouts to just those that occurred in the last week
+        vm.weeklyWorkouts = workoutSessions.filter(function(element) {
           let workoutDate = moment(element.date).format('YYYY-MM-DD')
           let dayOfWeek = moment(element.date).format('dddd')
 
           if (moment(workoutDate).isAfter(aWeekAgo)) {
+            element.id = element.id
             element.date = moment(workoutDate).format('YYYY-MM-DD')
             element.formattedDate = (moment(workoutDate).format('YYYY-MM-DD')).toString()
             element.displayDate = moment(workoutDate).format('DD/MM')
@@ -69,12 +57,7 @@ console.log('landing.index.js is connected');
             return element
           }
 	      }) // end filter
-      }) // end of the first .then
-      .then(() => {
-        console.log('new array is ', vm.newArray);
-      })
+      }) // end of the .then
     } // END INIT
-
-
   }
 })()

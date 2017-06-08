@@ -7,7 +7,7 @@ class Dvd {
 // Get All DVD workout sessions
   static getAll(){
     let id = 1
-    return knex('dvd_sessions').where('user_id', id).select('name as dvd_session_name', 'calories_burned', 'date')
+    return knex('dvd_sessions').where('user_id', id).select('id', 'name as dvd_session_name', 'calories_burned', 'date')
   }
 
 // get All workout DVD's

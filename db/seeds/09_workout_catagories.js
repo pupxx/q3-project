@@ -36,6 +36,21 @@ exports.seed = function(knex) {
         name: 'Core',
         created_at: new Date(),
         updated_at: new Date()
+      },{
+		 id: 8,
+        name: 'Lower Body Circuit',
+        created_at: new Date(),
+        updated_at: new Date()
+      },{
+		 id: 9,
+        name: 'Upper Body Circuit',
+        created_at: new Date(),
+        updated_at: new Date()
+      },{
+		 id: 10,
+        name: 'Pilates',
+        created_at: new Date(),
+        updated_at: new Date()
       }]);
     })
     .then(() => {

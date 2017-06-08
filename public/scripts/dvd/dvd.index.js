@@ -1,6 +1,11 @@
 
 (function(){
   angular.module('app')
+  .filter('rawHtml', ['$sce', function($sce){
+    return function(val) {
+      return $sce.trustAsHtml(val);
+    };
+  }])
   .component('dvdIndex', {
     controller: controller,
     templateUrl: './scripts/dvd/dvd.index.html'

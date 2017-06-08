@@ -28,7 +28,7 @@
             <div data-ng-repeat="selectedDvd in $ctrl.selectedDvd" data-as-sortable-item class="">
 
               <p data-as-sortable-item-handle>{{selectedDvd.title}}</p>
-              <p>{{selectedDvd.body}}</p>
+              <p style="white-space:pre-wrap;">{{selectedDvd.body | rawHtml }}</p>
 
             </div>
           </div>

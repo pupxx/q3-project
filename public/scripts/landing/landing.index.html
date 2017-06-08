@@ -35,14 +35,19 @@
     <div class="col-sm-9 calendar-container">
       <div ng-repeat="day in $ctrl.lastSevenDays track by $index">
         <div class="outer calendar-summary">
-          <div class="bottomleft">
-            <p>{{day}}</p>
-            <div ng-repeat="workout in $ctrl.newArray track by $index">
-              <div ng-if="workout.date == day">
-                <p>{{workout.calories_burned}} cal</p>
+          <!-- <div > -->
+            <div class="row" class="bottomleft">
+              <p>{{day.dayOfWeek}}</p>
+              <p>{{day.shortDate}}</p>
+            </div>
+            <div class="row">
+              <div ng-repeat="workout in $ctrl.newArray track by $index">
+                <div ng-if="workout.date == day.date">
+                  <p>{{workout.calories_burned}} cal</p>
+                </div>
               </div>
             </div> <!-- REPEAT -->
-          </div> <!-- BOTTOM LEFT -->
+        <!--   </div> BOTTOM LEFT -->
         </div> <!-- OUTER -->
       </div> <!-- REPEAT -->
     </div> <!-- COLUMN / CALENDAR CONTAINER -->

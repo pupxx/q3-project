@@ -114,6 +114,7 @@ QUOTE
   height: 100px;
   color: white;
   margin: 6px;
+  vertical-align: top;
 
   h3 {
     text-shadow: 0 0 3px #7C7873;
@@ -148,6 +149,8 @@ QUOTE
 
   .calendar-summary {
     box-shadow: $box-shadow-card;
+
+
   }
 }
 
@@ -174,9 +177,18 @@ QUOTE
 }
 
 /** HISTORY CALENDAR */
+.table {
+  width: 100%;
+
+  .tbody {
+    width: 100%;
+  }
+}
+
 .calendar-day {
-  padding: 40px;
+  padding: 60px;
   border-style: solid;
   border-width: thin;
-  background-color: rgb(196, 194, 199)
+  background-color: rgb(196, 194, 199);
+
 }

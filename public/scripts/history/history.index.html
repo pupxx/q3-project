@@ -9,10 +9,12 @@
  </p>
 <table>
   <tbody>
-    <h3>{{$ctrl.currentMonth}}</h3>
+    <h3>{{$ctrl.formattedCurrentMonth}}</h3>
     <tr ng-repeat="week in $ctrl.weeks">
       <td class="calendar-day" ng-repeat="day in week">
-        <a href="#" ng-mouseover="$ctrl.showDay(day)">{{ day }}</a>
+        <div>
+          <a href="#" ng-mouseover="$ctrl.showDay(day)">{{ day }}</a>
+        </div>
       </td>
     </tr>
   </tbody>

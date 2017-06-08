@@ -1,4 +1,4 @@
-console.log('index.js is connected');
+console.log('landing.index.js is connected');
 (function(){
   angular.module('app')
   .component('landingIndex', {
@@ -38,16 +38,25 @@ console.log('index.js is connected');
     vm.$onInit = function (){
       let today = moment(new Date())
       let aWeekAgo = moment().subtract(7,'d')
-      let lazySlug = 'No workout'
-      vm.lastSevenDays = vm.getDateRange(aWeekAgo, today)
-      let x = tempArray(vm.lastSevenDays)
-      console.log('x is ', x);
+      let weekObject = {}
 
-      console.log('====== vm.newbie is ', vm.newbie);
+      vm.lastSevenDays = vm.getDateRange(aWeekAgo, today)
+      // make an array of objects from vm.lastSevenDays
+      // give each object an assortment of display options
+      vm.lastSevenDays = vm.lastSevenDays.map(function(element) {
+        element = {
+          date: element,
+          shortDate: moment(element).format('DD/MM'),
+          dayOfWeek: moment(element).format('ddd')
+        }
+        return element
+      })
+      console.log(vm.lastSevenDays)
+
       $http.get(`${baseUrl}/api/landing`).then((result)=>{
         let temp = result.data
         // make an array of all workouts that occurred in the last week
-        vm.newArray = temp.map(function(element) {
+        vm.newArray = temp.filter(function(element) {
           let workoutDate = moment(element.date).format('YYYY-MM-DD')
           let dayOfWeek = moment(element.date).format('dddd')
 
@@ -58,12 +67,9 @@ console.log('index.js is connected');
             element.dayOfWeek = dayOfWeek
             element.noWorkout = ''
             return element
-
           }
-
-	      }) // end map
-
-      })
+	      }) // end filter
+      }) // end of the first .then
       .then(() => {
         console.log('new array is ', vm.newArray);
       })

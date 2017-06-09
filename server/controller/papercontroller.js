@@ -29,12 +29,26 @@ function createPaperSession(req, res) {
     })
     paper.postExercisePaperJoin().insert(joinTableArr).then(() => {
       let result = singleWorkout[0]
-      console.log(singleWorkout[0])
       res.send(result)
     })
   })
 }
+function editPaperSession(req, res) {
+
+  paper.editPaperSession().update({
+    calories_burned: req.body.calories_burned,
+    average_heart_rate: req.body.average_heart_rate,
+    max_heart_rate: req.body.max_heart_rate,
+    notes: req.body.notes
+  }).where({ id: req.params.id })
+  .returning('*')
+  .then((workout) => {
+    console.log('this is from editPaperSession', workout);
+
+    res.send(workout)
+  })
+}
 
 module.exports = {
-  getExercises, createPaperSession
+  getExercises, createPaperSession, editPaperSession
 }

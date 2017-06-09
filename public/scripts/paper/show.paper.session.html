@@ -18,13 +18,18 @@
         <div class="card-block">
           <h3 class="card-title">Workout Details</h3>
           <div class="card-text left-justified scrollable" style="min-width: 100%">
-            <p>{{ $ctrl.singlePaperWorkout.paper_session_name }}</p>
+            <h1>{{ $ctrl.singlePaperWorkout.paper_session_name }}</h1>
+            <h4>Calories Burned: {{ $ctrl.singlePaperWorkout.calories_burned}}</h4>
+            <h4>Max Heart-rate: {{ $ctrl.singlePaperWorkout.max_heart_rate}}</h4>
+            <h4>Avg. Heart-rate: {{ $ctrl.singlePaperWorkout.average_heart_rate}}</h4>
           </div>
-          <input type="text" name="" value="calories_burned">
-          <input type="text" name="" value="average_heart_rate">
-          <input type="text" name="" value="max_heart_rate">
-          <input type="text" name="" value="notes">
-          <a href="#" class="btn btn-primary custom-button">Save</a>
+          <form ng-submit="$ctrl.editWorkout()">
+            <input ng-model="$ctrl.singlePaperWorkout.calories_burned" type="text" name="" value="">
+            <input ng-model="$ctrl.singlePaperWorkout.average_heart_rate" type="text" name="" value="">
+            <input ng-model="$ctrl.singlePaperWorkout.max_heart_rate" type="text" name="" value="">
+            <input ng-model="$ctrl.singlePaperWorkout.notes" type="textbox" name="" value="">
+            <input type="submit" value="Save" class="btn btn-primary custom-button">
+          </form>
         </div>
       </div>
     </div>

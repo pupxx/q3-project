@@ -24,6 +24,10 @@ class Paper {
     return knex('paper_sessions_exercises_join')
   }
 
+  static editPaperSession () {
+    return knex('paper_sessions')
+  }
+
 }
 
 

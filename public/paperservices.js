@@ -19,10 +19,16 @@
     this.addPaperSession = (paperWorkout) => {
       return $http.post('/api/paper-session', paperWorkout).then((singlePaperWorkout) => {
         this.singlePaperWorkout = singlePaperWorkout.data;
-        console.log(this.singlePaperWorkout);
+        console.log(this.singlePaperWorkout.id);
         console.log('from paperservices file');
+
         // console.log(this.singlePaperWorkout, 'FRONT END');
       });
+    }
+
+    this.editWorkout = ()=>{
+      console.log('helloooooooooo')
+      return $http.patch(`/api/paper-session/${this.singlePaperWorkout.id}`, this.singlePaperWorkout)
     }
 
 

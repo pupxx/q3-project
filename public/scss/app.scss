@@ -3,7 +3,7 @@
 $box-shadow-card: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 $recurring-black: rgba(36, 32, 56, 1);
-$recurring-blue: rgba(48, 197, 255, 0.8);
+$recurring-blue: rgba(88, 132, 149, 0.8);
 $recurring-grey: rgba(202, 196, 206, 0.8);
 $recurring-green: rgba(225, 239, 238, 0.7);
 $recurring-white: rgba(240, 240, 243, 0.8);
@@ -43,6 +43,9 @@ NAVBAR
   font-family: $main-text;
 }
 
+.month-name {
+  text-align: center;
+}
 
 /**
 BANNER
@@ -252,9 +255,16 @@ QUOTE
 .table {
   width: 100%;
 
+
   .tbody {
     width: 100%;
   }
+}
+
+.calendar-data {
+  text-align: center;
+  font-family: $crimson-text;
+  font-size: 30px;
 }
 
 .calendar-day {

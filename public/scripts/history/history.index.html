@@ -2,21 +2,20 @@
   <h2>YOUR WORKOUT HISTORY</h2>
   <!-- <p>{{ $ctrl.history }}</p> -->
 </div> <!-- CONTAINER / BANNER -->
-<p>{{$ctrl.selectedWorkouts[0].dvd_session_name}}
-   {{$ctrl.selectedWorkouts[0].paper_session_name}}
-   {{$ctrl.selectedWorkouts[0].calories_burned}}
-   {{$ctrl.selectedWorkouts[0].date}}
-
- </p>
-<table>
+<table align="center">
   <tbody>
-    <h3>{{$ctrl.currentMonth}}</h3>
+    <h1 class="month-name">{{$ctrl.currentMonth}}</h1>
     <tr ng-repeat="week in $ctrl.weeks">
       <td class="calendar-day" ng-repeat="day in week">
         <div ng-mouseover="$ctrl.showDay(day)">
           <a href="#">{{ day }}</a>
         </div>
       </td>
+      <br>
+      <p class="calendar-data">{{$ctrl.selectedWorkouts[0].dvd_session_name}}
+        {{$ctrl.selectedWorkouts[0].paper_session_name}}
+        {{$ctrl.selectedWorkouts[0].calories_burned}}
+      </p>
     </tr>
   </tbody>
 </table>

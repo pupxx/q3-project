@@ -20,14 +20,19 @@ NAVBAR
   font-family: "Oswald";
 }
 
+/* line 46, ../scss/app.scss */
+.month-name {
+  text-align: center;
+}
+
 /**
 BANNER
 */
-/* line 50, ../scss/app.scss */
+/* line 53, ../scss/app.scss */
 .banner {
   background: radial-gradient(rgba(240, 240, 243, 0.8), #7c7873);
 }
-/* line 53, ../scss/app.scss */
+/* line 56, ../scss/app.scss */
 .banner h3 {
   color: #E8E7E6;
 }
@@ -35,11 +40,11 @@ BANNER
 /**
 DVD LIST
 */
-/* line 62, ../scss/app.scss */
+/* line 65, ../scss/app.scss */
 .dvd-list {
   background: radial-gradient(rgba(240, 240, 243, 0.8), #7c7873);
 }
-/* line 65, ../scss/app.scss */
+/* line 68, ../scss/app.scss */
 .dvd-list h3 {
   color: rgba(240, 240, 243, 0.8);
 }
@@ -47,11 +52,11 @@ DVD LIST
 /**
 CARDS
 */
-/* line 73, ../scss/app.scss */
+/* line 76, ../scss/app.scss */
 .relative {
   position: relative;
 }
-/* line 75, ../scss/app.scss */
+/* line 78, ../scss/app.scss */
 .relative .image-text {
   position: absolute;
   bottom: 0;
@@ -62,32 +67,32 @@ CARDS
   font-size: 25px;
 }
 
-/* line 87, ../scss/app.scss */
+/* line 90, ../scss/app.scss */
 .card-main .card-image {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 91, ../scss/app.scss */
+/* line 94, ../scss/app.scss */
 .card-main .hover-fun {
   transition: opacity .5s, transform .3s;
 }
-/* line 95, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 .card-main .hover-fun:hover {
   opacity: .5;
   transform: scale(1.01);
 }
 
-/* line 101, ../scss/app.scss */
+/* line 104, ../scss/app.scss */
 .card-text {
   background: rgba(240, 240, 243, 0.8);
 }
 
-/* line 105, ../scss/app.scss */
+/* line 108, ../scss/app.scss */
 .middle-card-container {
   position: relative;
   width: 100%;
 }
 
-/* line 110, ../scss/app.scss */
+/* line 113, ../scss/app.scss */
 .middle-card {
   transition: .5s ease;
   opacity: 0;
@@ -97,18 +102,18 @@ CARDS
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-/* line 119, ../scss/app.scss */
+/* line 122, ../scss/app.scss */
 .middle-card a {
   color: rgba(240, 240, 243, 0.8);
   font-weight: bold;
   text-decoration: none;
 }
-/* line 125, ../scss/app.scss */
+/* line 128, ../scss/app.scss */
 .middle-card a:hover {
-  color: rgba(48, 197, 255, 0.8);
+  color: rgba(88, 132, 149, 0.8);
 }
 
-/* line 131, ../scss/app.scss */
+/* line 134, ../scss/app.scss */
 .middle-card-image {
   opacity: 1;
   display: block;
@@ -118,17 +123,17 @@ CARDS
   backface-visibility: hidden;
 }
 
-/* line 141, ../scss/app.scss */
+/* line 144, ../scss/app.scss */
 .middle-card-container:hover .middle-card-image {
   opacity: 0.3;
 }
 
-/* line 145, ../scss/app.scss */
+/* line 148, ../scss/app.scss */
 .middle-card-container:hover .middle-card {
   opacity: 1;
 }
 
-/* line 149, ../scss/app.scss */
+/* line 152, ../scss/app.scss */
 .middle-card-text {
   background: rgba(20, 20, 20, 0.75);
   color: rgba(240, 240, 243, 0.8);
@@ -136,7 +141,7 @@ CARDS
   padding: 16px 32px;
 }
 
-/* line 157, ../scss/app.scss */
+/* line 160, ../scss/app.scss */
 .card-block h3 {
   color: #242038;
 }
@@ -144,7 +149,7 @@ CARDS
 /**
 QUOTE
 */
-/* line 165, ../scss/app.scss */
+/* line 168, ../scss/app.scss */
 .quote-container {
   background: rgba(20, 20, 20, 0.5);
   display: inline-block;
@@ -155,7 +160,7 @@ QUOTE
   margin: 6px;
   vertical-align: top;
 }
-/* line 175, ../scss/app.scss */
+/* line 178, ../scss/app.scss */
 .quote-container h3 {
   text-shadow: 0 0 3px #7C7873;
   font-family: "Crimson Text";
@@ -166,11 +171,11 @@ QUOTE
 /**
 7-DAY CALENDAR
 */
-/* line 186, ../scss/app.scss */
+/* line 189, ../scss/app.scss */
 .calendar-container {
   display: flex;
 }
-/* line 189, ../scss/app.scss */
+/* line 192, ../scss/app.scss */
 .calendar-container .outer {
   position: relative;
   background: rgba(225, 239, 238, 0.7);
@@ -178,7 +183,7 @@ QUOTE
   height: 100px;
   border: 2px solid rgba(240, 240, 243, 0.8);
 }
-/* line 197, ../scss/app.scss */
+/* line 200, ../scss/app.scss */
 .calendar-container .outer .bottomleft {
   display: inline-block;
   position: absolute;
@@ -188,7 +193,7 @@ QUOTE
   font-weight: bold;
   color: #000;
 }
-/* line 208, ../scss/app.scss */
+/* line 211, ../scss/app.scss */
 .calendar-container .calendar-summary {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -196,12 +201,12 @@ QUOTE
 /**
 
 */
-/* line 218, ../scss/app.scss */
+/* line 221, ../scss/app.scss */
 .badge {
-  background-color: rgba(48, 197, 255, 0.8) !important;
+  background-color: rgba(88, 132, 149, 0.8) !important;
 }
 
-/* line 223, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 .scrollable {
   height: 400px;
   max-height: 400px;
@@ -211,45 +216,52 @@ QUOTE
   border: 1px solid transparent;
 }
 
-/* line 232, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 .left-justified {
   text-align: left;
 }
 
-/* line 242, ../scss/app.scss */
+/* line 245, ../scss/app.scss */
 .custom-button {
-  background: rgba(48, 197, 255, 0.8);
+  background: rgba(88, 132, 149, 0.8);
 }
 
-/* line 246, ../scss/app.scss */
+/* line 249, ../scss/app.scss */
 .custom-button:hover {
   background: rgba(20, 20, 20, 0.75);
 }
 
 /** HISTORY CALENDAR */
-/* line 252, ../scss/app.scss */
+/* line 255, ../scss/app.scss */
 .table {
   width: 100%;
 }
-/* line 255, ../scss/app.scss */
+/* line 259, ../scss/app.scss */
 .table .tbody {
   width: 100%;
 }
 
-/* line 260, ../scss/app.scss */
+/* line 264, ../scss/app.scss */
+.calendar-data {
+  text-align: center;
+  font-family: "Crimson Text";
+  font-size: 30px;
+}
+
+/* line 270, ../scss/app.scss */
 .calendar-day {
   border-style: solid;
   border-width: thin;
   background-color: rgba(225, 239, 238, 0.7);
 }
-/* line 265, ../scss/app.scss */
+/* line 275, ../scss/app.scss */
 .calendar-day a {
   padding: 60px;
   display: block;
   color: black;
 }
 
-/* line 272, ../scss/app.scss */
+/* line 282, ../scss/app.scss */
 .calendar-day:hover {
-  background-color: rgba(48, 197, 255, 0.8);
+  background-color: rgba(88, 132, 149, 0.8);
 }

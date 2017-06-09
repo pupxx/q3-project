@@ -9,7 +9,11 @@ console.log('config file connected');
     $locationProvider.html5Mode(true)
     //
     $stateProvider
-  
+
+    .state({
+      name: 'home', url: '/', redirectTo: 'landingIndex'
+    })
+
     .state({
       name: 'landingIndex', url: '/home', component: 'landingIndex'
     })

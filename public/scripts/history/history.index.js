@@ -45,8 +45,6 @@
       })
       if (vm.selectedWorkouts.length > 0) {
         vm.yourWorkouts.push(vm.selectedWorkouts)
-        console.log('hey', vm.yourWorkouts);
-
       }
 
       // console.log('selecte wo', vm.selectedWorkouts);

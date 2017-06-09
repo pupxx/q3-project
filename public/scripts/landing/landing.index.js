@@ -12,13 +12,14 @@ console.log('landing.index.js is connected');
 
     // get last 7 days of dates, return it as an array of strings
     vm.getDateRange = function (begin, end) {
+      console.log("getDateRange", begin, end)
       let now = begin.clone()
       let dates = []
 
-      while (now.isBefore(end) || now.isSame(end)) {
+      while (now.isBefore(end)){
         dates.push(now.format('YYYY-MM-DD'))
-        now.add('days', 1)
-      }
+        now.add('days', 1
+      )}
       return dates
     }
 
@@ -27,7 +28,6 @@ console.log('landing.index.js is connected');
       let today = moment(new Date())
       let aWeekAgo = moment().subtract(7,'d')
       let weekObject = {}
-
       vm.lastSevenDays = vm.getDateRange(aWeekAgo, today)
       vm.lastSevenDays = vm.lastSevenDays.map(function(element) {
         element = {
@@ -41,7 +41,7 @@ console.log('landing.index.js is connected');
       $http.get(`${baseUrl}/api/landing`)
       .then((result)=>{
         let workoutSessions = result.data
-        console.log('data is ', result.data);
+
         // filter the array of all workouts to just those that occurred in the last week
         vm.weeklyWorkouts = workoutSessions.filter(function(element) {
           let workoutDate = moment(element.date).format('YYYY-MM-DD')
@@ -58,6 +58,6 @@ console.log('landing.index.js is connected');
           }
 	      }) // end filter
       }) // end of the .then
-    } // END INIT
+    } // end init
   }
 })()

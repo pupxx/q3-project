@@ -8,6 +8,7 @@
   controller.$inject = ['API_BASE_URL', '$http']
   function controller (baseUrl, $http){
     const vm = this
+    vm.yourWorkouts = []
 
     vm.$onInit = function (){
       $http.get(`${baseUrl}/api/landing`).then((res)=>{
@@ -16,12 +17,25 @@
         vm.history = res.data
         vm.weeks = calendar.map(function(week){
           dayList = []
+
           week.by('days', function(day){
-            dayList.push(day.format('D'))
+            var dayString = day.format('D');
+            var shouldDisplay = vm.showDay(dayString)
+            var day = {
+              day: dayString,
+              hasWorkout: shouldDisplay,
+
+            }
+            // console.log('ughlih ', vm.selectedWorkouts);
+            // if (vm.selectedWorkouts != null) {
+            //   vm.yourWorkouts.push(vm.selectedWorkouts[0])
+            // }
+
+            dayList.push(day)
           })
+
           return dayList
         })
-        console.log(weeks);
       })
     }
 
@@ -29,7 +43,14 @@
       vm.selectedWorkouts = vm.history.filter((workout) => {
         return moment(workout.date).format('D') === day
       })
-      console.log(day);
+      if (vm.selectedWorkouts.length > 0) {
+        vm.yourWorkouts.push(vm.selectedWorkouts)
+        console.log('hey', vm.yourWorkouts);
+
+      }
+
+      // console.log('selecte wo', vm.selectedWorkouts);
+      return vm.selectedWorkouts.length > 0;
     }
 
     // CALENDAR LINK https://jsfiddle.net/guillaumepiot/fg9mkygo/2/

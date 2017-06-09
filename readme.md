@@ -51,3 +51,24 @@ Workout Blender is a CRUD / SPA that allows the user to see a detailed breakdown
 
 
 ####Deployed on Heroku
+
+
+#INSTALLATION
+Clone the repository
+
+run yarn or npm Install
+=================
+
+To get sass up and running with compass:
+
+ At the command line:
+ gem Install sass (this is slow)
+gem install compass (for compiling sass)
+
+ In your project, add a file called config.rb. It has to be at the same level as the css folder of your project
+
+ Back at the command line:
+ Compass watch
+
+
+====

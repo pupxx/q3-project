@@ -149,7 +149,7 @@ CARDS
 /**
 QUOTE
 */
-/* line 168, ../scss/app.scss */
+/* line 169, ../scss/app.scss */
 .quote-container {
   background: rgba(20, 20, 20, 0.5);
   display: inline-block;
@@ -160,7 +160,7 @@ QUOTE
   margin: 6px;
   vertical-align: top;
 }
-/* line 178, ../scss/app.scss */
+/* line 179, ../scss/app.scss */
 .quote-container h3 {
   text-shadow: 0 0 3px #7C7873;
   font-family: "Crimson Text";
@@ -171,11 +171,11 @@ QUOTE
 /**
 7-DAY CALENDAR
 */
-/* line 189, ../scss/app.scss */
+/* line 190, ../scss/app.scss */
 .calendar-container {
   display: flex;
 }
-/* line 192, ../scss/app.scss */
+/* line 193, ../scss/app.scss */
 .calendar-container .outer {
   position: relative;
   background: rgba(225, 239, 238, 0.7);
@@ -183,7 +183,7 @@ QUOTE
   height: 100px;
   border: 2px solid rgba(240, 240, 243, 0.8);
 }
-/* line 200, ../scss/app.scss */
+/* line 201, ../scss/app.scss */
 .calendar-container .outer .bottomleft {
   display: inline-block;
   position: absolute;
@@ -193,7 +193,7 @@ QUOTE
   font-weight: bold;
   color: #000;
 }
-/* line 211, ../scss/app.scss */
+/* line 212, ../scss/app.scss */
 .calendar-container .calendar-summary {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -201,12 +201,12 @@ QUOTE
 /**
 
 */
-/* line 221, ../scss/app.scss */
+/* line 222, ../scss/app.scss */
 .badge {
   background-color: rgba(88, 132, 149, 0.8) !important;
 }
 
-/* line 226, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 .scrollable {
   height: 400px;
   max-height: 400px;
@@ -216,23 +216,23 @@ QUOTE
   border: 1px solid transparent;
 }
 
-/* line 235, ../scss/app.scss */
+/* line 236, ../scss/app.scss */
 .left-justified {
   text-align: left;
 }
 
-/* line 245, ../scss/app.scss */
+/* line 246, ../scss/app.scss */
 .custom-button {
   background: rgba(88, 132, 149, 0.8);
 }
 
-/* line 249, ../scss/app.scss */
+/* line 250, ../scss/app.scss */
 .custom-button:hover {
   background: rgba(20, 20, 20, 0.75);
 }
 
 /** HISTORY CALENDAR */
-/* line 255, ../scss/app.scss */
+/* line 256, ../scss/app.scss */
 .table {
   width: 100%;
 }
@@ -249,19 +249,24 @@ QUOTE
 }
 
 /* line 270, ../scss/app.scss */
+.calendar-month {
+  height: 40px;
+}
+
+/* line 273, ../scss/app.scss */
 .calendar-day {
   border-style: solid;
   border-width: thin;
   background-color: rgba(225, 239, 238, 0.7);
 }
-/* line 275, ../scss/app.scss */
+/* line 278, ../scss/app.scss */
 .calendar-day a {
   padding: 60px;
   display: block;
   color: black;
 }
 
-/* line 282, ../scss/app.scss */
+/* line 285, ../scss/app.scss */
 .calendar-day:hover {
   background-color: rgba(88, 132, 149, 0.8);
 }

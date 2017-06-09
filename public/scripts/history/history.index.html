@@ -5,14 +5,15 @@
 <table align="center">
   <tbody>
     <h1 class="month-name">{{$ctrl.currentMonth}}</h1>
+    <div class="calendar-month">
+    </div>
     <tr ng-repeat="week in $ctrl.weeks">
       <td class="calendar-day" ng-repeat="day in week">
         <div ng-mouseover="$ctrl.showDay(day)">
           <a href="#">{{ day }}</a>
         </div>
       </td>
-      <br>
-      <p class="calendar-data">{{$ctrl.selectedWorkouts[0].dvd_session_name}}
+      <p class="calendar-data calendar-month">{{$ctrl.selectedWorkouts[0].dvd_session_name}}
         {{$ctrl.selectedWorkouts[0].paper_session_name}}
         {{$ctrl.selectedWorkouts[0].calories_burned}}
       </p>

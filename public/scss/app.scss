@@ -162,6 +162,7 @@ CARDS
 
   }
 }
+
 /**
 QUOTE
 */
@@ -255,7 +256,6 @@ QUOTE
 .table {
   width: 100%;
 
-
   .tbody {
     width: 100%;
   }
@@ -267,6 +267,9 @@ QUOTE
   font-size: 30px;
 }
 
+.calendar-month {
+  height: 40px;
+}
 .calendar-day {
   border-style: solid;
   border-width: thin;

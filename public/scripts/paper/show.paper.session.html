@@ -16,7 +16,7 @@
           <div class="card-text left-justified scrollable" style="min-width: 100%">
             <h1>Workout Details</h1>
             <ul>
-              <li ng-repeat="name in $ctrl.singlePaperWorkout">hey{{name.exercise_name}}</li>
+              <li ng-repeat="name in $ctrl.singlePaperWorkout">{{name.exercise_name}}</li>
             </ul>
             <br>
             <h4>Calories Burned: {{ $ctrl.currentWorkout.calories_burned}}</h4>

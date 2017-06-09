@@ -14,6 +14,13 @@
         <div class="card-block">
           <h3 class="card-title">{{ $ctrl.singlePaperWorkout.paper_session_name }}</h3>
           <div class="card-text left-justified scrollable" style="min-width: 100%">
+            <h1>Workout Details</h1>
+            <ul>
+              <li ng-repeat="name in $ctrl.singlePaperWorkout">hey{{name.exercise_name}}</li>
+            </ul>
+            <ul>
+              <li ng-repeat="exerciseName in $ctrl.singlePaperWorkout['0'].data">{{exerciseName.exercise_name}}</li>
+            </ul>
             <br>
             <h4>Calories Burned: {{ $ctrl.singlePaperWorkout.calories_burned}}</h4>
             <br>

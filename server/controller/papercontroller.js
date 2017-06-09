@@ -17,8 +17,10 @@ function createPaperSession(req, res) {
 
   paper.createPaperSession().insert(paperWorkout).returning('*')
   .then((result) => {
+    // console.log(' im results', result);
     singleWorkout = result
     let joinTableArr = []
+
     newPaperExercises.forEach((el) => {
       // console.log(el);
       let exercises = {
@@ -27,14 +29,25 @@ function createPaperSession(req, res) {
       }
       joinTableArr.push(exercises)
     })
+
     paper.postExercisePaperJoin().insert(joinTableArr).then(() => {
       let result = singleWorkout[0]
-      res.send(result)
+      let id = singleWorkout[0].id
+      console.log(id);
+
+      return paper.getPaperWorkoutAndExercises()
+      .where('paper_sessions_exercises_join.paper_session_id', id)
+
+    }).then((all)=>{
+          console.log('here',all);
+          res.send(all)
     })
   })
 }
-function editPaperSession(req, res) {
 
+function editPaperSession(req, res) {
+  console.log(req.params);
+  console.log(req.body);
   paper.editPaperSession().update({
     calories_burned: req.body.calories_burned,
     average_heart_rate: req.body.average_heart_rate,
@@ -43,9 +56,9 @@ function editPaperSession(req, res) {
   }).where({ id: req.params.id })
   .returning('*')
   .then((workout) => {
-    console.log('this is from editPaperSession', workout);
-
+    console.log(workout);
     res.send(workout)
+
   })
 }
 

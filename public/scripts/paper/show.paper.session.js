@@ -19,9 +19,13 @@ console.log('show.paper.session.js is connected');
     function editWorkout (){
       console.log('controller')
       paperService.editWorkout().then((response)=>{
+        console.log('im the patch response:', response);
         vm.singlePaperWorkout[0] = response
-        console.log(response.data);
+        // console.log(response.data);
         // vm.singleWorkout = response
+      })
+      .then(() => {
+        console.log('This is our singlePaperWorkout after edit: ',vm.singlePaperWorkout);
       }).catch((err)=>{
         console.log('There was an error', err);
       })

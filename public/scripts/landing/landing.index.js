@@ -15,7 +15,7 @@ console.log('landing.index.js is connected');
       let now = begin.clone()
       let dates = []
 
-      while (now.isBefore(end) || now.isSame(end)) {
+      while (now.isBefore(end)) {
         dates.push(now.format('YYYY-MM-DD'))
         now.add('days', 1)
       }

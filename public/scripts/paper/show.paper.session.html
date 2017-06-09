@@ -18,15 +18,12 @@
             <ul>
               <li ng-repeat="name in $ctrl.singlePaperWorkout">hey{{name.exercise_name}}</li>
             </ul>
-            <ul>
-              <li ng-repeat="exerciseName in $ctrl.singlePaperWorkout['0'].data">{{exerciseName.exercise_name}}</li>
-            </ul>
             <br>
-            <h4>Calories Burned: {{ $ctrl.singlePaperWorkout.calories_burned}}</h4>
+            <h4>Calories Burned: {{ $ctrl.currentWorkout.calories_burned}}</h4>
             <br>
-            <h4>Max Heart-rate: {{ $ctrl.singlePaperWorkout.max_heart_rate}}</h4>
+            <h4>Max Heart-rate: {{ $ctrl.currentWorkout.max_heart_rate}}</h4>
             <br>
-            <h4>Avg. Heart-rate: {{ $ctrl.singlePaperWorkout.average_heart_rate}}</h4>
+            <h4>Avg. Heart-rate: {{ $ctrl.currentWorkout.average_heart_rate}}</h4>
           </div>
         </div>
       </div>
@@ -39,13 +36,13 @@
             <div class="form">
               <form id="contactFrm" ng-submit="$ctrl.editWorkout()">
                 <label for="">Calories Burned</label>
-                <input class="txt" ng-model="$ctrl.singlePaperWorkout.calories_burned" type="text" placeholder="Calories Burned">
+                <input class="txt" ng-model="$ctrl.currentWorkout.calories_burned" type="text" placeholder="Calories Burned">
                 <label for="">Max Heart Rate</label>
-                <input class="txt" ng-model="$ctrl.singlePaperWorkout.max_heart_rate" type="text" placeholder="Max Heart Rate">
+                <input class="txt" ng-model="$ctrl.currentWorkout.max_heart_rate" type="text" placeholder="Max Heart Rate">
                 <label for="">Average Heart Rate</label>
-                <input class="txt" ng-model="$ctrl.singlePaperWorkout.average_heart_rate" type="text" placeholder=" Average Heart Rate">
+                <input class="txt" ng-model="$ctrl.currentWorkout.average_heart_rate" type="text" placeholder=" Average Heart Rate">
                 <label for="">Workout Notes</label>
-                <textarea class="txt_3" ng-model="$ctrl.singlePaperWorkout.notes" placeholder="Workout Notes"></textarea>
+                <textarea class="txt_3" ng-model="$ctrl.currentWorkout.notes" placeholder="Workout Notes"></textarea>
                 <input type="submit" value="Save" class="txt2">
               </form>
             </div>

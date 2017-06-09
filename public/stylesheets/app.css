@@ -346,3 +346,8 @@ QUOTE
   color: #5793ef;
   transition: all 0.5s ease 0s;
 }
+
+/* line 351, ../scss/app.scss */
+.has-workout-true {
+  background: rgba(240, 240, 243, 0.8);
+}

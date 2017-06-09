@@ -1,50 +1,66 @@
 <div class="container text-center">
-  <h3>this is show.paper.session.html</h3><br>
+  <h3>Your Workout</h3><br>
   <div class="row">
     <div class="col-sm-4">
     </div>
     <div class="col-sm-4">
-      <h4>Workout Title</h4>
     </div>
     <div class="col-sm-4">
     </div>
-    <span class="badge">Equipment</span>
-    <span class="badge badge-primary">Equipment</span>
-    <span class="badge badge-success">Equipment</span>
   </div>
   <div class="row">
     <div class="col-sm-9">
       <div class="card w-75">
         <div class="card-block">
-          <h3 class="card-title">Workout Details</h3>
+          <h3 class="card-title">{{ $ctrl.singlePaperWorkout.paper_session_name }}</h3>
           <div class="card-text left-justified scrollable" style="min-width: 100%">
-            <h1>{{ $ctrl.singlePaperWorkout.paper_session_name }}</h1>
+            <br>
             <h4>Calories Burned: {{ $ctrl.singlePaperWorkout.calories_burned}}</h4>
+            <br>
             <h4>Max Heart-rate: {{ $ctrl.singlePaperWorkout.max_heart_rate}}</h4>
+            <br>
             <h4>Avg. Heart-rate: {{ $ctrl.singlePaperWorkout.average_heart_rate}}</h4>
           </div>
-          <form ng-submit="$ctrl.editWorkout()">
-            <input ng-model="$ctrl.singlePaperWorkout.calories_burned" type="text" name="" value="">
-            <input ng-model="$ctrl.singlePaperWorkout.average_heart_rate" type="text" name="" value="">
-            <input ng-model="$ctrl.singlePaperWorkout.max_heart_rate" type="text" name="" value="">
-            <input ng-model="$ctrl.singlePaperWorkout.notes" type="textbox" name="" value="">
-            <input type="submit" value="Save" class="btn btn-primary custom-button">
-          </form>
         </div>
       </div>
     </div>
-    <div class="col-sm-3">
-      <div class="card w-75">
-        <div class="card-block">
-          <h3 class="card-title">Weights</h3>
-          <textarea class="card-text scrollable" style="min-width: 100%">weights</textarea>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form_main">
+            <h4 class="heading"><strong>Workout </strong> Details <span></span></h4>
+            <div class="form">
+              <form id="contactFrm" ng-submit="$ctrl.editWorkout()">
+                <label for="">Calories Burned</label>
+                <input class="txt" ng-model="$ctrl.singlePaperWorkout.calories_burned" type="text" placeholder="Calories Burned">
+                <label for="">Max Heart Rate</label>
+                <input class="txt" ng-model="$ctrl.singlePaperWorkout.max_heart_rate" type="text" placeholder="Max Heart Rate">
+                <label for="">Average Heart Rate</label>
+                <input class="txt" ng-model="$ctrl.singlePaperWorkout.average_heart_rate" type="text" placeholder=" Average Heart Rate">
+                <label for="">Workout Notes</label>
+                <textarea class="txt_3" ng-model="$ctrl.singlePaperWorkout.notes" placeholder="Workout Notes"></textarea>
+                <input type="submit" value="Save" class="txt2">
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
 
-        </div>
-      </div>
     </div>
+    <!-- ROW -->
+
   </div>
   <!-- ROW -->
-
-</div>
-<!-- ROW -->
 </div><br>
+
+
+
+<!--
+<form ng-submit="$ctrl.editWorkout()">
+<input ng-model="$ctrl.singlePaperWorkout.calories_burned" type="text" name="" value="">
+<input ng-model="$ctrl.singlePaperWorkout.average_heart_rate" type="text" name="" value="">
+<input ng-model="$ctrl.singlePaperWorkout.max_heart_rate" type="text" name="" value="">
+<input ng-model="$ctrl.singlePaperWorkout.notes" type="textbox" name="" value="">
+<input type="submit" value="Save" class="btn btn-primary custom-button">
+</form> -->
